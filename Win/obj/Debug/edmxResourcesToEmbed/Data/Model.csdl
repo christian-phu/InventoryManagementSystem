@@ -1,0 +1,184 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="WinQLVatTuModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="ChiTietNhapKho">
+    <Key>
+      <PropertyRef Name="MaChiTietNhapKho" />
+    </Key>
+    <Property Name="MaChiTietNhapKho" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MaNhapKho" Type="Int32" />
+    <Property Name="MaVatTu" Type="Int32" />
+    <Property Name="DonGia" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="SoLuong" Type="Int32" />
+    <NavigationProperty Name="NhapKho" Relationship="Self.FK_ChiTietNhapKho_NhapKho" FromRole="ChiTietNhapKho" ToRole="NhapKho" />
+    <NavigationProperty Name="VatTu" Relationship="Self.FK_ChiTietNhapKho_VatTu" FromRole="ChiTietNhapKho" ToRole="VatTu" />
+  </EntityType>
+  <EntityType Name="ChiTietXuatKho">
+    <Key>
+      <PropertyRef Name="MaChiTietXuatKho" />
+    </Key>
+    <Property Name="MaChiTietXuatKho" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MaXuatKho" Type="Int32" />
+    <Property Name="MaVatTu" Type="Int32" />
+    <Property Name="DonGia" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="SoLuong" Type="Int32" />
+    <NavigationProperty Name="VatTu" Relationship="Self.FK_ChiTietXuatKho_VatTu" FromRole="ChiTietXuatKho" ToRole="VatTu" />
+    <NavigationProperty Name="XuatKho" Relationship="Self.FK_ChiTietXuatKho_XuatKho" FromRole="ChiTietXuatKho" ToRole="XuatKho" />
+  </EntityType>
+  <EntityType Name="NhanVien">
+    <Key>
+      <PropertyRef Name="MaNhanVien" />
+    </Key>
+    <Property Name="MaNhanVien" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="HoTen" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="TaiKhoan" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="MatKhau" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Quyen" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="NhapKhoes" Relationship="Self.FK_NhapKho_NhanVien" FromRole="NhanVien" ToRole="NhapKho" />
+    <NavigationProperty Name="XuatKhoes" Relationship="Self.FK_XuatKho_NhanVien" FromRole="NhanVien" ToRole="XuatKho" />
+  </EntityType>
+  <EntityType Name="NhapKho">
+    <Key>
+      <PropertyRef Name="MaNhapKho" />
+    </Key>
+    <Property Name="MaNhapKho" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MaNhanVien" Type="Int32" />
+    <Property Name="NgayThang" Type="DateTime" Precision="3" />
+    <Property Name="GhiChu" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="NhaCungCap" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="TienDaThanhToan" Type="Decimal" Precision="18" Scale="0" />
+    <NavigationProperty Name="ChiTietNhapKhoes" Relationship="Self.FK_ChiTietNhapKho_NhapKho" FromRole="NhapKho" ToRole="ChiTietNhapKho" />
+    <NavigationProperty Name="NhanVien" Relationship="Self.FK_NhapKho_NhanVien" FromRole="NhapKho" ToRole="NhanVien" />
+  </EntityType>
+  <EntityType Name="VatTu">
+    <Key>
+      <PropertyRef Name="MaVatTu" />
+    </Key>
+    <Property Name="MaVatTu" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TenVatTu" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="DonVi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="HinhAnh" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="GhiChu" Type="String" MaxLength="2000" FixedLength="false" Unicode="true" />
+    <Property Name="HangSanXuat" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="DonGia" Type="Decimal" Precision="18" Scale="0" />
+    <NavigationProperty Name="ChiTietNhapKhoes" Relationship="Self.FK_ChiTietNhapKho_VatTu" FromRole="VatTu" ToRole="ChiTietNhapKho" />
+    <NavigationProperty Name="ChiTietXuatKhoes" Relationship="Self.FK_ChiTietXuatKho_VatTu" FromRole="VatTu" ToRole="ChiTietXuatKho" />
+    <Property Name="SoLuong" Type="Int32" />
+  </EntityType>
+  <EntityType Name="XuatKho">
+    <Key>
+      <PropertyRef Name="MaXuatKho" />
+    </Key>
+    <Property Name="MaXuatKho" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MaNhanVien" Type="Int32" />
+    <Property Name="NgayThang" Type="DateTime" Precision="3" />
+    <Property Name="GhiChu" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="TienDaThanhToan" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="TrangThai" Type="Boolean" />
+    <NavigationProperty Name="ChiTietXuatKhoes" Relationship="Self.FK_ChiTietXuatKho_XuatKho" FromRole="XuatKho" ToRole="ChiTietXuatKho" />
+    <NavigationProperty Name="NhanVien" Relationship="Self.FK_XuatKho_NhanVien" FromRole="XuatKho" ToRole="NhanVien" />
+  </EntityType>
+  <Association Name="FK_ChiTietNhapKho_NhapKho">
+    <End Role="NhapKho" Type="Self.NhapKho" Multiplicity="0..1" />
+    <End Role="ChiTietNhapKho" Type="Self.ChiTietNhapKho" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="NhapKho">
+        <PropertyRef Name="MaNhapKho" />
+      </Principal>
+      <Dependent Role="ChiTietNhapKho">
+        <PropertyRef Name="MaNhapKho" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ChiTietNhapKho_VatTu">
+    <End Role="VatTu" Type="Self.VatTu" Multiplicity="0..1" />
+    <End Role="ChiTietNhapKho" Type="Self.ChiTietNhapKho" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="VatTu">
+        <PropertyRef Name="MaVatTu" />
+      </Principal>
+      <Dependent Role="ChiTietNhapKho">
+        <PropertyRef Name="MaVatTu" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ChiTietXuatKho_VatTu">
+    <End Role="VatTu" Type="Self.VatTu" Multiplicity="0..1" />
+    <End Role="ChiTietXuatKho" Type="Self.ChiTietXuatKho" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="VatTu">
+        <PropertyRef Name="MaVatTu" />
+      </Principal>
+      <Dependent Role="ChiTietXuatKho">
+        <PropertyRef Name="MaVatTu" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ChiTietXuatKho_XuatKho">
+    <End Role="XuatKho" Type="Self.XuatKho" Multiplicity="0..1" />
+    <End Role="ChiTietXuatKho" Type="Self.ChiTietXuatKho" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="XuatKho">
+        <PropertyRef Name="MaXuatKho" />
+      </Principal>
+      <Dependent Role="ChiTietXuatKho">
+        <PropertyRef Name="MaXuatKho" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_NhapKho_NhanVien">
+    <End Role="NhanVien" Type="Self.NhanVien" Multiplicity="0..1" />
+    <End Role="NhapKho" Type="Self.NhapKho" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="NhanVien">
+        <PropertyRef Name="MaNhanVien" />
+      </Principal>
+      <Dependent Role="NhapKho">
+        <PropertyRef Name="MaNhanVien" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_XuatKho_NhanVien">
+    <End Role="NhanVien" Type="Self.NhanVien" Multiplicity="0..1" />
+    <End Role="XuatKho" Type="Self.XuatKho" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="NhanVien">
+        <PropertyRef Name="MaNhanVien" />
+      </Principal>
+      <Dependent Role="XuatKho">
+        <PropertyRef Name="MaNhanVien" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="WinQLVatTuEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="ChiTietNhapKhoes" EntityType="Self.ChiTietNhapKho" />
+    <EntitySet Name="ChiTietXuatKhoes" EntityType="Self.ChiTietXuatKho" />
+    <EntitySet Name="NhanViens" EntityType="Self.NhanVien" />
+    <EntitySet Name="NhapKhoes" EntityType="Self.NhapKho" />
+    <EntitySet Name="VatTus" EntityType="Self.VatTu" />
+    <EntitySet Name="XuatKhoes" EntityType="Self.XuatKho" />
+    <AssociationSet Name="FK_ChiTietNhapKho_NhapKho" Association="Self.FK_ChiTietNhapKho_NhapKho">
+      <End Role="NhapKho" EntitySet="NhapKhoes" />
+      <End Role="ChiTietNhapKho" EntitySet="ChiTietNhapKhoes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ChiTietNhapKho_VatTu" Association="Self.FK_ChiTietNhapKho_VatTu">
+      <End Role="VatTu" EntitySet="VatTus" />
+      <End Role="ChiTietNhapKho" EntitySet="ChiTietNhapKhoes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ChiTietXuatKho_VatTu" Association="Self.FK_ChiTietXuatKho_VatTu">
+      <End Role="VatTu" EntitySet="VatTus" />
+      <End Role="ChiTietXuatKho" EntitySet="ChiTietXuatKhoes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ChiTietXuatKho_XuatKho" Association="Self.FK_ChiTietXuatKho_XuatKho">
+      <End Role="XuatKho" EntitySet="XuatKhoes" />
+      <End Role="ChiTietXuatKho" EntitySet="ChiTietXuatKhoes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_NhapKho_NhanVien" Association="Self.FK_NhapKho_NhanVien">
+      <End Role="NhanVien" EntitySet="NhanViens" />
+      <End Role="NhapKho" EntitySet="NhapKhoes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_XuatKho_NhanVien" Association="Self.FK_XuatKho_NhanVien">
+      <End Role="NhanVien" EntitySet="NhanViens" />
+      <End Role="XuatKho" EntitySet="XuatKhoes" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

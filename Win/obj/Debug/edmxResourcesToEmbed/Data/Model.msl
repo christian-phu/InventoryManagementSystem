@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="WinQLVatTuModelStoreContainer" CdmEntityContainer="WinQLVatTuEntities">
+    <EntitySetMapping Name="ChiTietNhapKhoes">
+      <EntityTypeMapping TypeName="WinQLVatTuModel.ChiTietNhapKho">
+        <MappingFragment StoreEntitySet="ChiTietNhapKho">
+          <ScalarProperty Name="MaChiTietNhapKho" ColumnName="MaChiTietNhapKho" />
+          <ScalarProperty Name="MaNhapKho" ColumnName="MaNhapKho" />
+          <ScalarProperty Name="MaVatTu" ColumnName="MaVatTu" />
+          <ScalarProperty Name="DonGia" ColumnName="DonGia" />
+          <ScalarProperty Name="SoLuong" ColumnName="SoLuong" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ChiTietXuatKhoes">
+      <EntityTypeMapping TypeName="WinQLVatTuModel.ChiTietXuatKho">
+        <MappingFragment StoreEntitySet="ChiTietXuatKho">
+          <ScalarProperty Name="MaChiTietXuatKho" ColumnName="MaChiTietXuatKho" />
+          <ScalarProperty Name="MaXuatKho" ColumnName="MaXuatKho" />
+          <ScalarProperty Name="MaVatTu" ColumnName="MaVatTu" />
+          <ScalarProperty Name="DonGia" ColumnName="DonGia" />
+          <ScalarProperty Name="SoLuong" ColumnName="SoLuong" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NhanViens">
+      <EntityTypeMapping TypeName="WinQLVatTuModel.NhanVien">
+        <MappingFragment StoreEntitySet="NhanVien">
+          <ScalarProperty Name="MaNhanVien" ColumnName="MaNhanVien" />
+          <ScalarProperty Name="HoTen" ColumnName="HoTen" />
+          <ScalarProperty Name="TaiKhoan" ColumnName="TaiKhoan" />
+          <ScalarProperty Name="MatKhau" ColumnName="MatKhau" />
+          <ScalarProperty Name="Quyen" ColumnName="Quyen" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NhapKhoes">
+      <EntityTypeMapping TypeName="WinQLVatTuModel.NhapKho">
+        <MappingFragment StoreEntitySet="NhapKho">
+          <ScalarProperty Name="MaNhapKho" ColumnName="MaNhapKho" />
+          <ScalarProperty Name="MaNhanVien" ColumnName="MaNhanVien" />
+          <ScalarProperty Name="NgayThang" ColumnName="NgayThang" />
+          <ScalarProperty Name="GhiChu" ColumnName="GhiChu" />
+          <ScalarProperty Name="NhaCungCap" ColumnName="NhaCungCap" />
+          <ScalarProperty Name="TienDaThanhToan" ColumnName="TienDaThanhToan" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VatTus">
+      <EntityTypeMapping TypeName="WinQLVatTuModel.VatTu">
+        <MappingFragment StoreEntitySet="VatTu">
+          <ScalarProperty Name="SoLuong" ColumnName="SoLuong" />
+          <ScalarProperty Name="MaVatTu" ColumnName="MaVatTu" />
+          <ScalarProperty Name="TenVatTu" ColumnName="TenVatTu" />
+          <ScalarProperty Name="DonVi" ColumnName="DonVi" />
+          <ScalarProperty Name="HinhAnh" ColumnName="HinhAnh" />
+          <ScalarProperty Name="GhiChu" ColumnName="GhiChu" />
+          <ScalarProperty Name="HangSanXuat" ColumnName="HangSanXuat" />
+          <ScalarProperty Name="DonGia" ColumnName="DonGia" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="XuatKhoes">
+      <EntityTypeMapping TypeName="WinQLVatTuModel.XuatKho">
+        <MappingFragment StoreEntitySet="XuatKho">
+          <ScalarProperty Name="MaXuatKho" ColumnName="MaXuatKho" />
+          <ScalarProperty Name="MaNhanVien" ColumnName="MaNhanVien" />
+          <ScalarProperty Name="NgayThang" ColumnName="NgayThang" />
+          <ScalarProperty Name="GhiChu" ColumnName="GhiChu" />
+          <ScalarProperty Name="TienDaThanhToan" ColumnName="TienDaThanhToan" />
+          <ScalarProperty Name="TrangThai" ColumnName="TrangThai" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
