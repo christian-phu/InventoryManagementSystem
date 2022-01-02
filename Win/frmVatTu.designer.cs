@@ -115,66 +115,70 @@
             this.groupBox3.Controls.Add(this.btnLuu);
             this.groupBox3.Controls.Add(this.btnThem);
             this.groupBox3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox3.Location = new System.Drawing.Point(0, 336);
+            this.groupBox3.Location = new System.Drawing.Point(0, 327);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(459, 79);
+            this.groupBox3.Size = new System.Drawing.Size(459, 88);
             this.groupBox3.TabIndex = 7;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Chức năng";
             // 
             // btnLamMoi
             // 
-            this.btnLamMoi.BackColor = System.Drawing.Color.OrangeRed;
+            this.btnLamMoi.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.btnLamMoi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLamMoi.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLamMoi.Image = ((System.Drawing.Image)(resources.GetObject("btnLamMoi.Image")));
             this.btnLamMoi.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLamMoi.Location = new System.Drawing.Point(354, 19);
+            this.btnLamMoi.Location = new System.Drawing.Point(312, 19);
             this.btnLamMoi.Name = "btnLamMoi";
-            this.btnLamMoi.Size = new System.Drawing.Size(88, 42);
+            this.btnLamMoi.Size = new System.Drawing.Size(75, 42);
             this.btnLamMoi.TabIndex = 3;
             this.btnLamMoi.Text = "Mới";
+            this.btnLamMoi.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnLamMoi.UseVisualStyleBackColor = false;
             this.btnLamMoi.Click += new System.EventHandler(this.btnHuy_Click);
             // 
             // btnXoa
             // 
-            this.btnXoa.BackColor = System.Drawing.Color.Red;
+            this.btnXoa.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.btnXoa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnXoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnXoa.Image = ((System.Drawing.Image)(resources.GetObject("btnXoa.Image")));
             this.btnXoa.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnXoa.Location = new System.Drawing.Point(245, 19);
+            this.btnXoa.Location = new System.Drawing.Point(233, 19);
             this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(88, 42);
+            this.btnXoa.Size = new System.Drawing.Size(73, 42);
             this.btnXoa.TabIndex = 2;
             this.btnXoa.Text = "Xóa";
+            this.btnXoa.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnXoa.UseVisualStyleBackColor = false;
             this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // btnLuu
             // 
-            this.btnLuu.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btnLuu.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.btnLuu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLuu.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLuu.Image = ((System.Drawing.Image)(resources.GetObject("btnLuu.Image")));
             this.btnLuu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLuu.Location = new System.Drawing.Point(134, 19);
+            this.btnLuu.Location = new System.Drawing.Point(153, 19);
             this.btnLuu.Name = "btnLuu";
-            this.btnLuu.Size = new System.Drawing.Size(88, 42);
+            this.btnLuu.Size = new System.Drawing.Size(74, 42);
             this.btnLuu.TabIndex = 1;
             this.btnLuu.Text = "Lưu";
+            this.btnLuu.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnLuu.UseVisualStyleBackColor = false;
             this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
             // 
             // btnThem
             // 
-            this.btnThem.BackColor = System.Drawing.Color.LightGreen;
+            this.btnThem.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.btnThem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnThem.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThem.Image = ((System.Drawing.Image)(resources.GetObject("btnThem.Image")));
             this.btnThem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnThem.Location = new System.Drawing.Point(12, 19);
+            this.btnThem.Location = new System.Drawing.Point(72, 19);
             this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(88, 42);
+            this.btnThem.Size = new System.Drawing.Size(75, 42);
             this.btnThem.TabIndex = 0;
             this.btnThem.Text = "Thêm";
+            this.btnThem.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnThem.UseVisualStyleBackColor = false;
             this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
@@ -198,15 +202,14 @@
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(459, 336);
+            this.groupBox1.Size = new System.Drawing.Size(459, 327);
             this.groupBox1.TabIndex = 5;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin";
-            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // txtHangSanXuat
             // 
-            this.txtHangSanXuat.Location = new System.Drawing.Point(122, 123);
+            this.txtHangSanXuat.Location = new System.Drawing.Point(123, 121);
             this.txtHangSanXuat.Name = "txtHangSanXuat";
             this.txtHangSanXuat.Size = new System.Drawing.Size(234, 20);
             this.txtHangSanXuat.TabIndex = 38;
@@ -214,7 +217,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(40, 126);
+            this.label6.Location = new System.Drawing.Point(41, 124);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(76, 13);
             this.label6.TabIndex = 37;
@@ -233,7 +236,7 @@
             "Viên",
             "Khối",
             "Cân"});
-            this.cbbDonVi.Location = new System.Drawing.Point(122, 93);
+            this.cbbDonVi.Location = new System.Drawing.Point(123, 91);
             this.cbbDonVi.Name = "cbbDonVi";
             this.cbbDonVi.Size = new System.Drawing.Size(234, 21);
             this.cbbDonVi.TabIndex = 34;
@@ -241,7 +244,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(78, 95);
+            this.label3.Location = new System.Drawing.Point(79, 93);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(38, 13);
             this.label3.TabIndex = 31;
@@ -250,17 +253,16 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(326, 69);
+            this.label2.Location = new System.Drawing.Point(327, 67);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(30, 13);
             this.label2.TabIndex = 29;
             this.label2.Text = "VNĐ";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(72, 263);
+            this.label11.Location = new System.Drawing.Point(73, 247);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(44, 13);
             this.label11.TabIndex = 28;
@@ -268,16 +270,16 @@
             // 
             // txtGhiChu
             // 
-            this.txtGhiChu.Location = new System.Drawing.Point(122, 252);
+            this.txtGhiChu.Location = new System.Drawing.Point(123, 247);
             this.txtGhiChu.Multiline = true;
             this.txtGhiChu.Name = "txtGhiChu";
-            this.txtGhiChu.Size = new System.Drawing.Size(234, 77);
+            this.txtGhiChu.Size = new System.Drawing.Size(234, 79);
             this.txtGhiChu.TabIndex = 27;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(93, 69);
+            this.label7.Location = new System.Drawing.Point(94, 67);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(23, 13);
             this.label7.TabIndex = 19;
@@ -285,7 +287,7 @@
             // 
             // txtGia
             // 
-            this.txtGia.Location = new System.Drawing.Point(122, 66);
+            this.txtGia.Location = new System.Drawing.Point(123, 64);
             this.txtGia.Name = "txtGia";
             this.txtGia.Size = new System.Drawing.Size(234, 20);
             this.txtGia.TabIndex = 13;
@@ -293,13 +295,11 @@
             // 
             // btnTaiAnh
             // 
-            this.btnTaiAnh.BackColor = System.Drawing.Color.LightGreen;
+            this.btnTaiAnh.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(183)))), ((int)(((byte)(77)))));
             this.btnTaiAnh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTaiAnh.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTaiAnh.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnTaiAnh.Location = new System.Drawing.Point(122, 149);
+            this.btnTaiAnh.Location = new System.Drawing.Point(123, 150);
             this.btnTaiAnh.Name = "btnTaiAnh";
-            this.btnTaiAnh.Size = new System.Drawing.Size(99, 27);
+            this.btnTaiAnh.Size = new System.Drawing.Size(117, 24);
             this.btnTaiAnh.TabIndex = 8;
             this.btnTaiAnh.Text = "Tải ảnh";
             this.btnTaiAnh.UseVisualStyleBackColor = false;
@@ -307,24 +307,23 @@
             // 
             // pbAnh
             // 
-            this.pbAnh.Location = new System.Drawing.Point(244, 149);
+            this.pbAnh.Location = new System.Drawing.Point(259, 146);
             this.pbAnh.Name = "pbAnh";
-            this.pbAnh.Size = new System.Drawing.Size(112, 97);
+            this.pbAnh.Size = new System.Drawing.Size(98, 95);
             this.pbAnh.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pbAnh.TabIndex = 7;
             this.pbAnh.TabStop = false;
-            this.pbAnh.Click += new System.EventHandler(this.pbAnh_Click);
             // 
             // txtTenVatTu
             // 
-            this.txtTenVatTu.Location = new System.Drawing.Point(122, 40);
+            this.txtTenVatTu.Location = new System.Drawing.Point(123, 38);
             this.txtTenVatTu.Name = "txtTenVatTu";
             this.txtTenVatTu.Size = new System.Drawing.Size(234, 20);
             this.txtTenVatTu.TabIndex = 6;
             // 
             // txtMaVatTu
             // 
-            this.txtMaVatTu.Location = new System.Drawing.Point(122, 16);
+            this.txtMaVatTu.Location = new System.Drawing.Point(123, 14);
             this.txtMaVatTu.Name = "txtMaVatTu";
             this.txtMaVatTu.Size = new System.Drawing.Size(234, 20);
             this.txtMaVatTu.TabIndex = 5;
@@ -332,7 +331,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(60, 43);
+            this.label5.Location = new System.Drawing.Point(61, 41);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(56, 13);
             this.label5.TabIndex = 4;
@@ -341,7 +340,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(64, 19);
+            this.label1.Location = new System.Drawing.Point(65, 17);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(52, 13);
             this.label1.TabIndex = 0;
