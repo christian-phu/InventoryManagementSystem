@@ -316,5 +316,10 @@ namespace Win
         {
 
         }
+
+        private void barButtonItem1_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://docs.google.com/forms/d/17roLCI0dPWQNPDCrMCCTjzLUa1uq1BHd2CpgKqw8ALg/edit#responses");
+        }
     }
 }
