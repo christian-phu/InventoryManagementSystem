@@ -42,25 +42,25 @@
     <Reference Include="CrystalDecisions.Enterprise.Viewing.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </Reference>
-    <Reference Include="CrystalDecisions.ReportAppServer.ClientDoc, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+    <Reference Include="CrystalDecisions.ReportAppServer.ClientDoc, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </Reference>
-    <Reference Include="CrystalDecisions.ReportAppServer.CommLayer, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+    <Reference Include="CrystalDecisions.ReportAppServer.CommLayer, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </Reference>
-    <Reference Include="CrystalDecisions.ReportAppServer.CommonControls, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+    <Reference Include="CrystalDecisions.ReportAppServer.CommonControls, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </Reference>
-    <Reference Include="CrystalDecisions.ReportAppServer.CommonObjectModel, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+    <Reference Include="CrystalDecisions.ReportAppServer.CommonObjectModel, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </Reference>
-    <Reference Include="CrystalDecisions.ReportAppServer.Controllers, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+    <Reference Include="CrystalDecisions.ReportAppServer.Controllers, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </Reference>
-    <Reference Include="CrystalDecisions.ReportAppServer.CubeDefModel, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+    <Reference Include="CrystalDecisions.ReportAppServer.CubeDefModel, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </Reference>
-    <Reference Include="CrystalDecisions.ReportAppServer.DataDefModel, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+    <Reference Include="CrystalDecisions.ReportAppServer.DataDefModel, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </Reference>
     <Reference Include="CrystalDecisions.ReportAppServer.DataSetConversion, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
@@ -70,10 +70,10 @@
     <Reference Include="CrystalDecisions.ReportAppServer.Prompting, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </Reference>
-    <Reference Include="CrystalDecisions.ReportAppServer.ReportDefModel, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+    <Reference Include="CrystalDecisions.ReportAppServer.ReportDefModel, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </Reference>
-    <Reference Include="CrystalDecisions.ReportAppServer.XmlSerialize, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+    <Reference Include="CrystalDecisions.ReportAppServer.XmlSerialize, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </Reference>
     <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
@@ -81,11 +81,11 @@
     <Reference Include="CrystalDecisions.VSDesigner, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="CrystalDecisions.Web, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.Data.v17.1, Version=17.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.Printing.v17.1.Core, Version=17.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.Utils.v17.1, Version=17.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.XtraBars.v17.1, Version=17.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.XtraEditors.v17.1, Version=17.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Data.v17.1, Version=17.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Printing.v17.1.Core, Version=17.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v17.1, Version=17.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraBars.v17.1, Version=17.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v17.1, Version=17.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
       <Private>True</Private>
@@ -111,34 +111,31 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="crThuHoi.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>crThuHoi.rpt</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="crNhapKho1.cs">
+    <Compile Include="crNhapKho.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>crNhapKho.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="crTonKho1.cs">
+    <Compile Include="crThanhToan.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crThanhToan.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="crTonKho.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>crTonKho.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="crXuatKho1.cs">
+    <Compile Include="crXuatKho.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>crXuatKho.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Data\ChiTietNhapKho.cs">
-      <DependentUpon>Model.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Data\ChiTietThuHoi.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
     <Compile Include="Data\ChiTietXuatKho.cs">
@@ -176,14 +173,17 @@
     <Compile Include="Data\NhapKho.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
-    <Compile Include="Data\ThuHoi.cs">
-      <DependentUpon>Model.tt</DependentUpon>
-    </Compile>
     <Compile Include="Data\VatTu.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
     <Compile Include="Data\XuatKho.cs">
       <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="frmThanhToan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmThanhToan.designer.cs">
+      <DependentUpon>frmThanhToan.cs</DependentUpon>
     </Compile>
     <Compile Include="frmBCNhapKho.cs">
       <SubType>Form</SubType>
@@ -197,23 +197,11 @@
     <Compile Include="frmBCXuatKho.designer.cs">
       <DependentUpon>frmBCXuatKho.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmBCThuHoi.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmBCThuHoi.Designer.cs">
-      <DependentUpon>frmBCThuHoi.cs</DependentUpon>
-    </Compile>
     <Compile Include="frmIn.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmIn.designer.cs">
       <DependentUpon>frmIn.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmThuHoi.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmThuHoi.designer.cs">
-      <DependentUpon>frmThuHoi.cs</DependentUpon>
     </Compile>
     <Compile Include="frmTonKho.cs">
       <SubType>Form</SubType>
@@ -277,21 +265,24 @@
     <Compile Include="frmQuanLy.Designer.cs">
       <DependentUpon>frmQuanLy.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="crThuHoi.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>crThuHoi.cs</LastGenOutput>
-    </EmbeddedResource>
     <EmbeddedResource Include="crNhapKho.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>crNhapKho1.cs</LastGenOutput>
+      <LastGenOutput>crNhapKho.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="crThanhToan.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crThanhToan.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="crTonKho.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>crTonKho1.cs</LastGenOutput>
+      <LastGenOutput>crTonKho.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="crXuatKho.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>crXuatKho1.cs</LastGenOutput>
+      <LastGenOutput>crXuatKho.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmThanhToan.resx">
+      <DependentUpon>frmThanhToan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmBCNhapKho.resx">
       <DependentUpon>frmBCNhapKho.cs</DependentUpon>
@@ -299,14 +290,8 @@
     <EmbeddedResource Include="frmBCXuatKho.resx">
       <DependentUpon>frmBCXuatKho.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmBCThuHoi.resx">
-      <DependentUpon>frmBCThuHoi.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="frmIn.resx">
       <DependentUpon>frmIn.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmThuHoi.resx">
-      <DependentUpon>frmThuHoi.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmTonKho.resx">
       <DependentUpon>frmTonKho.cs</DependentUpon>
@@ -347,6 +332,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="frmQuanLy.resx">
       <DependentUpon>frmQuanLy.cs</DependentUpon>
@@ -394,6 +380,7 @@
       <DependentUpon>Model.edmx</DependentUpon>
       <LastGenOutput>Model.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\logo GCBT-01 %281%29.png" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />

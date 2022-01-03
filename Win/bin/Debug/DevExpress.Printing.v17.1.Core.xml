@@ -26,10 +26,12 @@
         </member>
         <member name="M:DevExpress.XtraReports.UI.XRConvert.#ctor(DevExpress.XtraReports.UI.ReportUnit_Utils)">
             <summary>
-                <para>For internal use.</para>
+                <para>Obsolete. Use another constructor of the XRConvert class instead. 
+</para>
             </summary>
             <param name="unit">
 		 
+
             </param>
 
 
@@ -241,12 +243,15 @@
         </member>
         <member name="M:DevExpress.XtraReports.UI.XRConvert.ToBorderSide(DevExpress.XtraReports.UI.XRBorderSide_Utils)">
             <summary>
-                <para>For internal use.</para>
+                <para>Obsolete. Use other members of the XRConvert class instead. 
+</para>
             </summary>
             <param name="val">
 		 
+
             </param>
-            <returns> </returns>
+            <returns> 
+</returns>
 
 
         </member>
@@ -280,23 +285,29 @@
         </member>
         <member name="M:DevExpress.XtraReports.UI.XRConvert.ToXRBorderSide(DevExpress.XtraPrinting.BorderSide)">
             <summary>
-                <para>For internal use.</para>
+                <para>Obsolete. Use other members of the XRConvert class instead. 
+</para>
             </summary>
             <param name="val">
 		 
+
             </param>
-            <returns> </returns>
+            <returns> 
+</returns>
 
 
         </member>
         <member name="M:DevExpress.XtraReports.UI.XRConvert.UnitToDpi(DevExpress.XtraReports.UI.ReportUnit_Utils)">
             <summary>
-                <para>For internal use.</para>
+                <para>Obsolete. Use other members of the XRConvert class instead.
+</para>
             </summary>
             <param name="reportUnit">
 		 
+
             </param>
-            <returns> </returns>
+            <returns> 
+</returns>
 
 
         </member>
@@ -1411,17 +1422,23 @@ The displayed error message corresponds to the <see cref="F:DevExpress.XtraPrint
         </member>
         <member name="P:DevExpress.XtraPrinting.HtmlExportOptionsBase.RasterizationResolution">
             <summary>
-                <para>For internal use.</para>
+                <para>For internal use.
+
+</para>
             </summary>
-            <value> </value>
+            <value>Always <b>96</b>.
+</value>
 
 
         </member>
         <member name="P:DevExpress.XtraPrinting.HtmlExportOptionsBase.RasterizeImages">
             <summary>
-                <para>For internal use.</para>
+                <para>For internal use.
+
+</para>
             </summary>
-            <value> </value>
+            <value>Always <b>true</b>.
+</value>
 
 
         </member>
@@ -2095,14 +2112,6 @@ The displayed error message corresponds to the <see cref="F:DevExpress.XtraPrint
             <value>An <see cref="T:DevExpress.XtraPrinting.EncodingType"/> enumeration value which represents the encoding type of the created text-based document.
 
 </value>
-
-
-        </member>
-        <member name="M:DevExpress.XtraPrinting.TextExportOptionsBase.GetActualSeparator">
-            <summary>
-                <para> </para>
-            </summary>
-            <returns> </returns>
 
 
         </member>
@@ -5980,10 +5989,12 @@ The displayed error message corresponds to the <see cref="F:DevExpress.XtraPrint
         </member>
         <member name="M:DevExpress.XtraReports.IReport.ApplyPageSettings(DevExpress.XtraPrinting.XtraPageSettingsBase)">
             <summary>
-                <para>For internal use.</para>
+                <para>For internal use. If implemented by a class, applies the page settings
+</para>
             </summary>
             <param name="destinationSettings">
 		 
+
             </param>
 
 
@@ -6000,13 +6011,19 @@ The displayed error message corresponds to the <see cref="F:DevExpress.XtraPrint
         </member>
         <member name="M:DevExpress.XtraReports.IReport.CollectParameters(System.Collections.Generic.IList`1,System.Predicate`1)">
             <summary>
-                <para>For internal use.</para>
+                <para>For internal use. When implemented by a class, collects all report parameters that satisfy the specified conditions.
+
+
+
+</para>
             </summary>
             <param name="list">
-		 
+		A list of the <see cref="T:DevExpress.XtraReports.Parameters.Parameter"/> objects.
+
             </param>
             <param name="condition">
-		 
+		A <b>Predicate</b> object that stores the parameter conditions.
+
             </param>
 
 
@@ -6020,59 +6037,73 @@ The displayed error message corresponds to the <see cref="F:DevExpress.XtraPrint
         </member>
         <member name="P:DevExpress.XtraReports.IReport.IsDisposed">
             <summary>
-                <para>For internal use.</para>
+                <para>For internal use. Gets a value indicating whether the control has been disposed of.
+</para>
             </summary>
-            <value> </value>
+            <value><b>true</b> if the control has been disposed of; otherwise, <b>false</b>.
+</value>
 
 
         </member>
         <member name="E:DevExpress.XtraReports.IReport.ParametersRequestSubmit">
             <summary>
-                <para>For internal use.</para>
+                <para>Occurs when all parameter values in the <b>Parameters</b> UI are entered, and the <b>Submit</b> button is pressed.
+
+</para>
             </summary>
 
 
         </member>
         <member name="P:DevExpress.XtraReports.IReport.PrintTool">
             <summary>
-                <para>For internal use.</para>
+                <para>For internal use. If implemented by a class, specifies the <see cref="T:DevExpress.XtraReports.UI.ReportPrintTool"/> associated with the current report.
+</para>
             </summary>
-            <value> </value>
+            <value>An object implementing the <see cref="T:DevExpress.XtraReports.UI.IReportPrintTool"/> interface.
+</value>
 
 
         </member>
         <member name="M:DevExpress.XtraReports.IReport.RaiseParametersRequestBeforeShow(System.Collections.Generic.IList`1)">
             <summary>
-                <para>For internal use.</para>
+                <para>For internal use. If implemented by a class, raises the <see cref="E:DevExpress.XtraReports.UI.XtraReport.ParametersRequestBeforeShow"/> event.
+</para>
             </summary>
             <param name="parametersInfo">
 		 
+
             </param>
 
 
         </member>
         <member name="M:DevExpress.XtraReports.IReport.RaiseParametersRequestSubmit(System.Collections.Generic.IList`1,System.Boolean)">
             <summary>
-                <para>For internal use.</para>
+                <para>For internal use. If implemented by a class, raises the <see cref="E:DevExpress.XtraReports.UI.XtraReport.ParametersRequestSubmit"/> event.
+</para>
             </summary>
             <param name="parametersInfo">
 		 
+
             </param>
             <param name="createDocument">
 		 
+
             </param>
 
 
         </member>
         <member name="M:DevExpress.XtraReports.IReport.RaiseParametersRequestValueChanged(System.Collections.Generic.IList`1,DevExpress.XtraReports.Parameters.ParameterInfo)">
             <summary>
-                <para>For internal use.</para>
+                <para>For internal use. If implemented by a class, raises the <see cref="E:DevExpress.XtraReports.UI.XtraReport.ParametersRequestValueChanged"/> event.
+</para>
             </summary>
             <param name="parametersInfo">
 		 
+
             </param>
             <param name="changedParameterInfo">
 		 
+
             </param>
 
 
@@ -6086,17 +6117,21 @@ The displayed error message corresponds to the <see cref="F:DevExpress.XtraPrint
         </member>
         <member name="P:DevExpress.XtraReports.IReport.RequestParameters">
             <summary>
-                <para>For internal use.</para>
+                <para>When implemented by a class, specifies whether the report document creation should start <b>before</b> all the report parameters are submitted.
+</para>
             </summary>
-            <value> </value>
+            <value><b>true</b> to start to create the report document before submitting its parameters; otherwise, <b>false</b>.
+</value>
 
 
         </member>
         <member name="P:DevExpress.XtraReports.IReport.ShowPreviewMarginLines">
             <summary>
-                <para>For internal use.</para>
+                <para>For internal use. If implemented by a class, specifies whether the report preview window shows page margin lines. 
+</para>
             </summary>
-            <value> </value>
+            <value><b>true</b> to show page margin lines; otherwise <b>false</b>.
+</value>
 
 
         </member>
@@ -6110,13 +6145,16 @@ The displayed error message corresponds to the <see cref="F:DevExpress.XtraPrint
         </member>
         <member name="M:DevExpress.XtraReports.IReport.UpdatePageSettings(DevExpress.XtraPrinting.XtraPageSettingsBase,System.String)">
             <summary>
-                <para>For internal use.</para>
+                <para>For internal use. If implemented by a class, updates the page settings
+</para>
             </summary>
             <param name="sourceSettings">
 		 
+
             </param>
             <param name="paperName">
 		 
+
             </param>
 
 
@@ -6303,10 +6341,12 @@ The displayed error message corresponds to the <see cref="F:DevExpress.XtraPrint
         </member>
         <member name="M:DevExpress.XtraPrintingLinks.PrintableComponentLinkBase.CreateDocument(System.Boolean)">
             <summary>
-                <para>For internal use.</para>
+                <para>Creates a document from the <see cref="T:DevExpress.XtraPrinting.PrintableComponentLink"/> object, so the document can be displayed or printed.
+</para>
             </summary>
             <param name="buildForInstantPreview">
-		 
+		A Boolean value. This value is ignored and has no effect on the document creation process.
+
             </param>
 
 
@@ -6595,9 +6635,12 @@ The displayed error message corresponds to the <see cref="F:DevExpress.XtraPrint
         </member>
         <member name="P:DevExpress.XtraPrinting.PdfExportOptions.Compressed">
             <summary>
-                <para>For internal use.</para>
+                <para>For internal use. Gets or sets a value indicating whether the resulting PDF file should be compressed.
+
+</para>
             </summary>
-            <value> </value>
+            <value>Always <b>true</b>.
+</value>
 
 
         </member>
@@ -6677,17 +6720,22 @@ The displayed error message corresponds to the <see cref="F:DevExpress.XtraPrint
         </member>
         <member name="P:DevExpress.XtraPrinting.PdfExportOptions.RasterizationResolution">
             <summary>
-                <para>For internal use.</para>
+                <para>For internal use.
+</para>
             </summary>
-            <value> </value>
+            <value>Always <b>96</b>.
+</value>
 
 
         </member>
         <member name="P:DevExpress.XtraPrinting.PdfExportOptions.RasterizeImages">
             <summary>
-                <para>For internal use.</para>
+                <para>For internal use.
+
+</para>
             </summary>
-            <value> </value>
+            <value>Always <b>true</b>.
+</value>
 
 
         </member>
@@ -6831,22 +6879,6 @@ The displayed error message corresponds to the <see cref="F:DevExpress.XtraPrint
 
 
         </member>
-        <member name="M:DevExpress.XtraPrinting.CsvExportOptions.GetActualSeparator">
-            <summary>
-                <para> </para>
-            </summary>
-            <returns> </returns>
-
-
-        </member>
-        <member name="P:DevExpress.XtraPrinting.CsvExportOptions.Separator">
-            <summary>
-                <para> </para>
-            </summary>
-            <value> </value>
-
-
-        </member>
         <member name="P:DevExpress.XtraPrinting.CsvExportOptions.SkipEmptyColumns">
             <summary>
                 <para>Specifies whether or not to include the empty columns into the resulting CSV file.
@@ -6865,14 +6897,6 @@ The displayed error message corresponds to the <see cref="F:DevExpress.XtraPrint
             </summary>
             <value><b>true</b> to omit the empty rows during export; otherwise <b>false</b>.
 </value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraPrinting.CsvExportOptions.UseCustomSeparator">
-            <summary>
-                <para> </para>
-            </summary>
-            <value> </value>
 
 
         </member>
@@ -7521,17 +7545,23 @@ The displayed error message corresponds to the <see cref="F:DevExpress.XtraPrint
         </member>
         <member name="P:DevExpress.XtraPrinting.ImageExportOptions.RasterizationResolution">
             <summary>
-                <para>For internal use.</para>
+                <para>For internal use.
+
+</para>
             </summary>
-            <value> </value>
+            <value>Always <b>96</b>.
+</value>
 
 
         </member>
         <member name="P:DevExpress.XtraPrinting.ImageExportOptions.RasterizeImages">
             <summary>
-                <para>For internal use.</para>
+                <para>For internal use.
+
+</para>
             </summary>
-            <value> </value>
+            <value>Always <b>true</b>.
+</value>
 
 
         </member>
@@ -9337,17 +9367,21 @@ The default value is <b>600</b> DPI.
         </member>
         <member name="P:DevExpress.XtraPrinting.XpsExportOptions.RasterizationResolution">
             <summary>
-                <para>For internal use.</para>
+                <para>For internal use.
+</para>
             </summary>
-            <value> </value>
+            <value>Always <b>96</b>.
+</value>
 
 
         </member>
         <member name="P:DevExpress.XtraPrinting.XpsExportOptions.RasterizeImages">
             <summary>
-                <para>For internal use.</para>
+                <para>For internal use.
+</para>
             </summary>
-            <value> </value>
+            <value>Always <b>true</b>.
+</value>
 
 
         </member>
@@ -9540,7 +9574,7 @@ If the <i>values</i> parameter is <b>null</b>, a <b>System.ArgumentNullException
         </member>
         <member name="P:DevExpress.Export.Xl.IXlRow.IsCollapsed">
             <summary>
-                <para>Gets or sets a value indicating whether the group related to this summary row is collapsed.
+                <para>Gets or sets a value indicating whether the group located below or above the current row is collapsed.
 </para>
             </summary>
             <value><b>true</b>, if the group is collapsed; otherwise, <b>false</b>.
@@ -12024,7 +12058,7 @@ Adds a single-line underline that is displayed lower than the <see cref="F:DevEx
         </member>
         <member name="P:DevExpress.Export.Xl.IXlColumn.IsCollapsed">
             <summary>
-                <para>Gets or sets a value indicating whether the group related to this summary column is collapsed.
+                <para>Gets or sets a value indicating whether the group located to the left or to the right of the current column is collapsed.
 </para>
             </summary>
             <value><b>true</b>, if the group is collapsed; otherwise, <b>false</b>.
@@ -12104,33 +12138,30 @@ Adds a single-line underline that is displayed lower than the <see cref="F:DevEx
         </member>
         <member name="M:DevExpress.Export.Xl.IXlSheet.BeginGroup(System.Boolean)">
             <summary>
-                <para>Starts creating a new group in the worksheet.
+                <para>Starts creating the new group in a worksheet.
 </para>
             </summary>
             <param name="collapsed">
 		<b>true</b>, to collapse the group; otherwise, <b>false</b>.
 
             </param>
-            <returns>An integer value specifying the outline level of the created group.
-</returns>
+            <returns> </returns>
 
 
         </member>
         <member name="M:DevExpress.Export.Xl.IXlSheet.BeginGroup(System.Int32,System.Boolean)">
             <summary>
-                <para>Starts creating a new group in the worksheet.
+                <para>Starts creating the new group in a worksheet.
 </para>
             </summary>
             <param name="outlineLevel">
-		An integer value specifying the group's outline level.
-
+		 
             </param>
             <param name="collapsed">
 		<b>true</b>, to collapse the group; otherwise, <b>false</b>.
 
             </param>
-            <returns>An integer value that is the outline level of the created group.
-</returns>
+            <returns> </returns>
 
 
         </member>
@@ -12146,11 +12177,9 @@ Adds a single-line underline that is displayed lower than the <see cref="F:DevEx
         </member>
         <member name="P:DevExpress.Export.Xl.IXlSheet.ColumnRange">
             <summary>
-                <para>Returns the cell range that contains all custom columns manually generated in the worksheet. 
-</para>
+                <para> </para>
             </summary>
-            <value>An <see cref="T:DevExpress.Export.Xl.XlCellRange"/> object that encompasses all columns manually generated in the worksheet.
-</value>
+            <value> </value>
 
 
         </member>
@@ -12226,30 +12255,30 @@ Adds a single-line underline that is displayed lower than the <see cref="F:DevEx
         </member>
         <member name="P:DevExpress.Export.Xl.IXlSheet.CurrentColumnIndex">
             <summary>
-                <para>Gets the index of the column where the document exporter is currently positioned.
+                <para>Gets the index of the column where the exporter is currently positioned. 
 </para>
             </summary>
-            <value>A zero-based integer value that specifies the column index.
+            <value>A zero-based integer value that specifies the index of the current column.
 </value>
 
 
         </member>
         <member name="P:DevExpress.Export.Xl.IXlSheet.CurrentOutlineLevel">
             <summary>
-                <para>Gets the outline level of the currently generated group.
+                <para>
 </para>
             </summary>
-            <value>A zero-based integer that is the outline level of the current group.
+            <value>A zero-based integer that is the outline level. 
 </value>
 
 
         </member>
         <member name="P:DevExpress.Export.Xl.IXlSheet.CurrentRowIndex">
             <summary>
-                <para>Gets the index of the row where the document exporter is currently positioned.
+                <para>Gets the index of the row where the exporter is currently positioned.
 </para>
             </summary>
-            <value>A zero-based integer value that specifies the row index.
+            <value>A zero-based integer value that specifies the index of the current row.
 </value>
 
 
@@ -13721,13 +13750,16 @@ Adds a single-line underline that is displayed lower than the <see cref="F:DevEx
         </member>
         <member name="M:DevExpress.XtraPrinting.PrintingSystemBase.EnableCommand(DevExpress.XtraPrinting.PrintingSystemCommand,System.Boolean)">
             <summary>
-                <para>For internal use.</para>
+                <para>Enables the specified printing system command. 
+</para>
             </summary>
             <param name="command">
-		 
+		A <see cref="T:DevExpress.XtraPrinting.PrintingSystemCommand"/> enumeration value. 
+
             </param>
             <param name="enabled">
-		 
+		<b>true</b> to enable the command; otherwise, <b>false</b>.
+
             </param>
 
 
@@ -13799,9 +13831,12 @@ Adds a single-line underline that is displayed lower than the <see cref="F:DevEx
         </member>
         <member name="P:DevExpress.XtraPrinting.PrintingSystemBase.ExportDefault">
             <summary>
-                <para>For internal use.</para>
+                <para>Gets or sets the command to be executed as the default to export the current report. 
+
+</para>
             </summary>
-            <value> </value>
+            <value>A <see cref="T:DevExpress.XtraPrinting.PrintingSystemCommand"/> enumeration value.
+</value>
 
 
         </member>
@@ -13874,46 +13909,56 @@ Adds a single-line underline that is displayed lower than the <see cref="F:DevEx
         </member>
         <member name="M:DevExpress.XtraPrinting.PrintingSystemBase.ExportToDocx(System.IO.Stream,DevExpress.XtraPrinting.DocxExportOptions)">
             <summary>
-                <para>For internal use.</para>
+                <para>Exports a document to the specified stream in DOCX format using the specified DOCX-specific options.
+</para>
             </summary>
             <param name="stream">
-		 
+		A <see cref="T:System.IO.Stream"/> object to which the created DOCX file should be sent.
+
             </param>
             <param name="options">
-		 
+		A <see cref="T:DevExpress.XtraPrinting.DocxExportOptions"/> object that specifies the DOCX export options to be applied when a document is exported.
+
             </param>
 
 
         </member>
         <member name="M:DevExpress.XtraPrinting.PrintingSystemBase.ExportToDocx(System.IO.Stream)">
             <summary>
-                <para>For internal use.</para>
+                <para>Exports a document to the specified stream in DOCX format.
+</para>
             </summary>
             <param name="stream">
-		 
+		A <see cref="T:System.IO.Stream"/> object to which the created DOCX file should be sent.
+
             </param>
 
 
         </member>
         <member name="M:DevExpress.XtraPrinting.PrintingSystemBase.ExportToDocx(System.String)">
             <summary>
-                <para>For internal use.</para>
+                <para>Exports a document to the specified file path in DOCX format.
+</para>
             </summary>
             <param name="filePath">
-		 
+		A <see cref="T:System.String"/> value that specifies the file name (including the full path) for the created DOCX file.
+
             </param>
 
 
         </member>
         <member name="M:DevExpress.XtraPrinting.PrintingSystemBase.ExportToDocx(System.String,DevExpress.XtraPrinting.DocxExportOptions)">
             <summary>
-                <para>For internal use.</para>
+                <para>Exports a document to the specified file path in DOCX format using the specified DOCX-specific options.
+</para>
             </summary>
             <param name="filePath">
-		 
+		A <see cref="T:System.String"/> value that specifies the file name (including the full path) for the created DOCX file.
+
             </param>
             <param name="options">
-		 
+		A <see cref="T:DevExpress.XtraPrinting.DocxExportOptions"/> object that specifies the DOCX export options to be applied when a document is exported.
+
             </param>
 
 
@@ -14878,9 +14923,12 @@ Adds a single-line underline that is displayed lower than the <see cref="F:DevEx
         </member>
         <member name="P:DevExpress.XtraPrinting.PrintingSystemBase.SendDefault">
             <summary>
-                <para>For internal use.</para>
+                <para>Gets or sets the command to be executed as the default, to export and send the current report. 
+
+</para>
             </summary>
-            <value> </value>
+            <value>A <see cref="T:DevExpress.XtraPrinting.PrintingSystemCommand"/> enumeration member.
+</value>
 
 
         </member>
@@ -15016,7 +15064,8 @@ Adds a single-line underline that is displayed lower than the <see cref="F:DevEx
         </member>
         <member name="E:DevExpress.XtraPrinting.PrintingSystemBase.XlsxDocumentCreated">
             <summary>
-                <para>For internal use.</para>
+                <para>Obsolete. Use the <see cref="E:DevExpress.XtraPrinting.PrintingSystemBase.XlSheetCreated"/> event instead.
+</para>
             </summary>
 
 
@@ -15496,14 +15545,6 @@ When exporting to XLS and XLSX formats, the layout of control elements is retain
 
 
         </member>
-        <member name="P:DevExpress.XtraPrinting.CsvExportOptionsEx.Separator">
-            <summary>
-                <para> </para>
-            </summary>
-            <value> </value>
-
-
-        </member>
         <member name="P:DevExpress.XtraPrinting.CsvExportOptionsEx.SuppressEmptyStrings">
             <summary>
                 <para> </para>
@@ -15777,17 +15818,21 @@ The DefaultBoolean.Default value is equivalent to <b>True</b>.
         </member>
         <member name="P:DevExpress.XtraPrinting.XlsxExportOptionsEx.FitToPrintedPageHeight">
             <summary>
-                <para>For internal use.</para>
+                <para>Not supported by the XlsxExportOptionsEx class.
+</para>
             </summary>
-            <value> </value>
+            <value> 
+</value>
 
 
         </member>
         <member name="P:DevExpress.XtraPrinting.XlsxExportOptionsEx.FitToPrintedPageWidth">
             <summary>
-                <para>For internal use.</para>
+                <para>Not supported by the XlsxExportOptionsEx class.
+</para>
             </summary>
-            <value> </value>
+            <value> 
+</value>
 
 
         </member>
@@ -15813,25 +15858,31 @@ The DefaultBoolean.Default value is equivalent to <b>True</b>.
         </member>
         <member name="P:DevExpress.XtraPrinting.XlsxExportOptionsEx.PageRange">
             <summary>
-                <para>For internal use.</para>
+                <para>Not supported by the XlsxExportOptionsEx class.
+</para>
             </summary>
-            <value> </value>
+            <value> 
+</value>
 
 
         </member>
         <member name="P:DevExpress.XtraPrinting.XlsxExportOptionsEx.RasterizationResolution">
             <summary>
-                <para>For internal use.</para>
+                <para>Not supported by the XlsxExportOptionsEx class.
+</para>
             </summary>
-            <value> </value>
+            <value> 
+</value>
 
 
         </member>
         <member name="P:DevExpress.XtraPrinting.XlsxExportOptionsEx.RasterizeImages">
             <summary>
-                <para>For internal use.</para>
+                <para>Not supported by the XlsxExportOptionsEx class.
+</para>
             </summary>
-            <value> </value>
+            <value> 
+</value>
 
 
         </member>
@@ -16205,17 +16256,21 @@ The DefaultBoolean.Default value is equivalent to <b>True</b>.
         </member>
         <member name="P:DevExpress.XtraPrinting.XlsExportOptionsEx.FitToPrintedPageHeight">
             <summary>
-                <para>For internal use.</para>
+                <para>Not supported by the XlsExportOptionsEx class.
+</para>
             </summary>
-            <value> </value>
+            <value> 
+</value>
 
 
         </member>
         <member name="P:DevExpress.XtraPrinting.XlsExportOptionsEx.FitToPrintedPageWidth">
             <summary>
-                <para>For internal use.</para>
+                <para>Not supported by the XlsExportOptionsEx class.
+</para>
             </summary>
-            <value> </value>
+            <value> 
+</value>
 
 
         </member>
@@ -16241,25 +16296,31 @@ The DefaultBoolean.Default value is equivalent to <b>True</b>.
         </member>
         <member name="P:DevExpress.XtraPrinting.XlsExportOptionsEx.PageRange">
             <summary>
-                <para>For internal use.</para>
+                <para>Not supported by the XlsExportOptionsEx class.
+</para>
             </summary>
-            <value> </value>
+            <value> 
+</value>
 
 
         </member>
         <member name="P:DevExpress.XtraPrinting.XlsExportOptionsEx.RasterizationResolution">
             <summary>
-                <para>For internal use.</para>
+                <para>Not supported by the XlsExportOptionsEx class.
+</para>
             </summary>
-            <value> </value>
+            <value> 
+</value>
 
 
         </member>
         <member name="P:DevExpress.XtraPrinting.XlsExportOptionsEx.RasterizeImages">
             <summary>
-                <para>For internal use.</para>
+                <para>Not supported by the XlsExportOptionsEx class.
+</para>
             </summary>
-            <value> </value>
+            <value> 
+</value>
 
 
         </member>
@@ -16356,9 +16417,11 @@ The DefaultBoolean.Default value is equivalent to <b>True</b>.
         </member>
         <member name="P:DevExpress.XtraPrinting.XlsExportOptionsEx.WorkbookColorPaletteCompliance">
             <summary>
-                <para>For internal use.</para>
+                <para>Not supported by the XlsExportOptionsEx class.
+</para>
             </summary>
-            <value> </value>
+            <value> 
+</value>
 
 
         </member>
@@ -29724,7 +29787,8 @@ Supported in Excel 2010 and higher.
             <summary>
                 <para>For internal use.</para>
             </summary>
-            <value> </value>
+            <value> 
+</value>
 
 
         </member>
@@ -30043,20 +30107,24 @@ Supported in Excel 2010 and higher.
         </member>
         <member name="M:DevExpress.ReportServer.Printing.RemotePrintingSystem.RequestRemoteDocument(DevExpress.DocumentServices.ServiceModel.DataContracts.InstanceIdentity,DevExpress.DocumentServices.ServiceModel.IParameterContainer)">
             <summary>
-                <para>For internal use.</para>
+                <para>Obtains the specified report created by a remote document source.
+</para>
             </summary>
             <param name="reportId">
-		 
+		An <see cref="T:DevExpress.DocumentServices.ServiceModel.DataContracts.InstanceIdentity"/> object, identifying the report.
+
             </param>
             <param name="parameters">
-		 
+		An object implementing the <see cref="T:DevExpress.DocumentServices.ServiceModel.IParameterContainer"/> interface, specifying the report parameters.
+
             </param>
 
 
         </member>
         <member name="M:DevExpress.ReportServer.Printing.RemotePrintingSystem.SubmitParameters">
             <summary>
-                <para>For internal use.</para>
+                <para>Passes the entered values to the report parameters and triggers document creation based on these values.
+</para>
             </summary>
 
 
@@ -30422,10 +30490,12 @@ Supported in Excel 2010 and higher.
         </member>
         <member name="M:DevExpress.XtraPrinting.LinkBase.CreateDocument(System.Boolean)">
             <summary>
-                <para>For internal use.</para>
+                <para>Creates a document from the link, so the document can be displayed or printed.
+</para>
             </summary>
             <param name="buildForInstantPreview">
-		 
+		A Boolean value. This value is ignored and has no effect on the document creation process.
+
             </param>
 
 
@@ -30570,46 +30640,56 @@ Supported in Excel 2010 and higher.
         </member>
         <member name="M:DevExpress.XtraPrinting.LinkBase.ExportToDocx(System.String)">
             <summary>
-                <para>For internal use.</para>
+                <para>Exports a document to the specified file path in DOCX format.
+</para>
             </summary>
             <param name="filePath">
-		 
+		A <see cref="T:System.String"/> value that specifies the file name (including the full path) for the created DOCX file.
+
             </param>
 
 
         </member>
         <member name="M:DevExpress.XtraPrinting.LinkBase.ExportToDocx(System.IO.Stream,DevExpress.XtraPrinting.DocxExportOptions)">
             <summary>
-                <para>For internal use.</para>
+                <para>Exports a document to the specified stream in DOCX format using the defined DOCX-specific options.
+</para>
             </summary>
             <param name="stream">
-		 
+		A <see cref="T:System.IO.Stream"/> object to which the created DOCX file should be sent.
+
             </param>
             <param name="options">
-		 
+		A <see cref="T:DevExpress.XtraPrinting.DocxExportOptions"/> object that specifies the DOCX export options to be applied when a document is exported.
+
             </param>
 
 
         </member>
         <member name="M:DevExpress.XtraPrinting.LinkBase.ExportToDocx(System.String,DevExpress.XtraPrinting.DocxExportOptions)">
             <summary>
-                <para>For internal use.</para>
+                <para>Exports a document to the specified file path in DOCX format using the specified DOCX-specific options.
+</para>
             </summary>
             <param name="filePath">
-		 
+		A <see cref="T:System.String"/> value that specifies the file name (including the full path) for the created DOCX file.
+
             </param>
             <param name="options">
-		 
+		A <see cref="T:DevExpress.XtraPrinting.DocxExportOptions"/> object that specifies the DOCX export options to be applied when a document is exported.
+
             </param>
 
 
         </member>
         <member name="M:DevExpress.XtraPrinting.LinkBase.ExportToDocx(System.IO.Stream)">
             <summary>
-                <para>For internal use.</para>
+                <para>Exports a document to the specified stream in DOCX format.
+</para>
             </summary>
             <param name="stream">
-		 
+		A <see cref="T:System.IO.Stream"/> object to which the created DOCX file should be sent.
+
             </param>
 
 
@@ -31331,16 +31411,20 @@ Supported in Excel 2010 and higher.
         </member>
         <member name="M:DevExpress.XtraPrinting.PageSettingsHelper.ChangePageSettings(System.Drawing.Printing.PageSettings,System.Drawing.Printing.PaperSize,DevExpress.XtraPrinting.Native.ReadonlyPageData)">
             <summary>
-                <para>For internal use.</para>
+                <para>For internal use.
+</para>
             </summary>
             <param name="pageSettings">
-		 
+		A <see cref="T:System.Drawing.Printing.PageSettings"/> object.
+
             </param>
             <param name="paperSize">
-		 
+		A <see cref="T:System.Drawing.Printing.PaperSize"/> object.
+
             </param>
             <param name="pageData">
-		 
+		A DevExpress.XtraPrinting.Native.ReadonlyPageData object.
+
             </param>
 
 
@@ -32529,7 +32613,8 @@ Supported in Excel 2010 and higher.
             <summary>
                 <para>For internal use.</para>
             </summary>
-            <value> </value>
+            <value>Always <b>96</b>.
+</value>
 
 
         </member>
@@ -32537,7 +32622,8 @@ Supported in Excel 2010 and higher.
             <summary>
                 <para>For internal use.</para>
             </summary>
-            <value> </value>
+            <value>Always <b>true</b>.
+</value>
 
 
         </member>
@@ -33479,16 +33565,20 @@ The default is <b>true</b>.
         </member>
         <member name="M:DevExpress.XtraPrinting.PrinterSettingsUsing.#ctor(System.Boolean,System.Boolean,System.Boolean)">
             <summary>
-                <para>For internal use.</para>
+                <para>For internal use. Initializes a new instance of the PrinterSettingsUsing class with the specified margins, paper kind and orientation settings of the system's default printer.
+</para>
             </summary>
             <param name="useMargins">
-		 
+		<b>true</b> to use the margin values of the default printer's settings; otherwise, <b>false</b>. 
+
             </param>
             <param name="usePaperKind">
-		 
+		<b>true</b> to use the paper kind of the default printer's settings; otherwise, <b>false</b>. This value is assigned to the <see cref="P:DevExpress.XtraPrinting.PrinterSettingsUsing.UsePaperKind"/> property.
+
             </param>
             <param name="useLandscape">
-		 
+		<b>true</b> to use the landscape values of the default printer's settings; otherwise, <b>false</b>. This value is assigned to the <see cref="P:DevExpress.XtraPrinting.PrinterSettingsUsing.UseLandscape"/> property.
+
             </param>
 
 
@@ -33543,9 +33633,13 @@ The default is <b>true</b>.
         </member>
         <member name="P:DevExpress.XtraPrinting.PrinterSettingsUsing.UseMargins">
             <summary>
-                <para>For internal use.</para>
+                <para>For internal use. 
+
+
+</para>
             </summary>
-            <value> </value>
+            <value>Always <b>false</b>.
+</value>
 
 
         </member>
@@ -33649,7 +33743,8 @@ The default is <b>true</b>.
             <summary>
                 <para>For internal use.</para>
             </summary>
-            <value> </value>
+            <value> 
+</value>
 
 
         </member>
@@ -33705,9 +33800,11 @@ The default is <b>true</b>.
         </member>
         <member name="P:DevExpress.XtraPrinting.EditingField.Indices">
             <summary>
-                <para>For internal use.</para>
+                <para>For internal use.
+</para>
             </summary>
-            <value> </value>
+            <value> 
+</value>
 
 
         </member>
@@ -39539,11 +39636,9 @@ With this setting, the actual cell size is less than the specified <b>CellHeight
         </member>
         <member name="P:DevExpress.XtraExport.Csv.CsvDataAwareExporterOptions.QuoteTextValues">
             <summary>
-                <para>Gets or sets whether to put quotes around all text values in CSV output.
-</para>
+                <para> </para>
             </summary>
-            <value>A <see cref="CsvQuotation"/> enumeration value that specifies whether always quote text values, never put quotes around text values, or let the built-in algorithm decide.
-</value>
+            <value> </value>
 
 
         </member>
@@ -43587,7 +43682,7 @@ This value should start from <b>1</b> and cannot exceed <b>1,048,575</b> for row
         </member>
         <member name="P:DevExpress.XtraPrinting.VisualBrick.NavigationRef">
             <summary>
-                <para>For internal use.</para>
+                <para> </para>
             </summary>
             <value> </value>
 
@@ -43659,7 +43754,8 @@ This value should start from <b>1</b> and cannot exceed <b>1,048,575</b> for row
             <summary>
                 <para>For internal use.</para>
             </summary>
-            <value> </value>
+            <value> 
+</value>
 
 
         </member>
@@ -45823,7 +45919,8 @@ This value should start from <b>1</b> and cannot exceed <b>1,048,575</b> for row
             <summary>
                 <para>For internal use.</para>
             </summary>
-            <value> </value>
+            <value> 
+</value>
 
 
         </member>
@@ -46025,13 +46122,16 @@ This value should start from <b>1</b> and cannot exceed <b>1,048,575</b> for row
         </member>
         <member name="M:DevExpress.XtraPrinting.Brick.SetAttachedValue``1(DevExpress.XtraPrinting.AttachedProperty{``0},``0)">
             <summary>
-                <para>For internal use.</para>
+                <para>For internal use.
+</para>
             </summary>
             <param name="prop">
 		 
+
             </param>
             <param name="value">
 		 
+
             </param>
 
 
