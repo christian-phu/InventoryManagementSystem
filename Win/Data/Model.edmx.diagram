@@ -5,18 +5,18 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="494914ee08e8433798c3d79979e34728" Name="Diagram1">
-        <EntityTypeShape EntityType="WinQLVatTuModel.ChiTietNhapKho" Width="1.5" PointX="3" PointY="4.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="WinQLVatTuModel.ChiTietXuatKho" Width="1.5" PointX="3" PointY="0.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="WinQLVatTuModel.NhanVien" Width="1.5" PointX="1.5" PointY="12.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="WinQLVatTuModel.NhapKho" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="WinQLVatTuModel.VatTu" Width="1.5" PointX="0.75" PointY="4.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="WinQLVatTuModel.XuatKho" Width="1.5" PointX="0.75" PointY="8.375" IsExpanded="true" />
-        <AssociationConnector Association="WinQLVatTuModel.FK_ChiTietNhapKho_NhapKho" ManuallyRouted="false" />
-        <AssociationConnector Association="WinQLVatTuModel.FK_ChiTietNhapKho_VatTu" ManuallyRouted="false" />
-        <AssociationConnector Association="WinQLVatTuModel.FK_ChiTietXuatKho_VatTu" ManuallyRouted="false" />
-        <AssociationConnector Association="WinQLVatTuModel.FK_ChiTietXuatKho_XuatKho" ManuallyRouted="false" />
-        <AssociationConnector Association="WinQLVatTuModel.FK_NhapKho_NhanVien" ManuallyRouted="false" />
-        <AssociationConnector Association="WinQLVatTuModel.FK_XuatKho_NhanVien" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="WinQLSanPhamModel.ChiTietNhapKho" Width="1.5" PointX="3" PointY="4.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="WinQLSanPhamModel.ChiTietXuatKho" Width="1.5" PointX="3" PointY="0.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="WinQLSanPhamModel.NhanVien" Width="1.5" PointX="1.5" PointY="12.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="WinQLSanPhamModel.NhapKho" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="WinQLSanPhamModel.SanPham" Width="1.5" PointX="0.75" PointY="4.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="WinQLSanPhamModel.XuatKho" Width="1.5" PointX="0.75" PointY="8.375" IsExpanded="true" />
+        <AssociationConnector Association="WinQLSanPhamModel.FK_ChiTietNhapKho_NhapKho" ManuallyRouted="false" />
+        <AssociationConnector Association="WinQLSanPhamModel.FK_ChiTietNhapKho_SanPham" ManuallyRouted="false" />
+        <AssociationConnector Association="WinQLSanPhamModel.FK_ChiTietXuatKho_SanPham" ManuallyRouted="false" />
+        <AssociationConnector Association="WinQLSanPhamModel.FK_ChiTietXuatKho_XuatKho" ManuallyRouted="false" />
+        <AssociationConnector Association="WinQLSanPhamModel.FK_NhapKho_NhanVien" ManuallyRouted="false" />
+        <AssociationConnector Association="WinQLSanPhamModel.FK_XuatKho_NhanVien" ManuallyRouted="false" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

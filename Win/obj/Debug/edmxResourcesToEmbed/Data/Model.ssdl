@@ -1,12 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Schema Namespace="WinQLVatTuModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+<Schema Namespace="WinQLSanPhamModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
   <EntityType Name="ChiTietNhapKho">
     <Key>
       <PropertyRef Name="MaChiTietNhapKho" />
     </Key>
     <Property Name="MaChiTietNhapKho" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="MaNhapKho" Type="int" />
-    <Property Name="MaVatTu" Type="int" />
+    <Property Name="MaSanPham" Type="int" />
     <Property Name="DonGia" Type="decimal" Precision="18" Scale="0" />
     <Property Name="SoLuong" Type="int" />
   </EntityType>
@@ -16,7 +16,7 @@
     </Key>
     <Property Name="MaChiTietXuatKho" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="MaXuatKho" Type="int" />
-    <Property Name="MaVatTu" Type="int" />
+    <Property Name="MaSanPham" Type="int" />
     <Property Name="DonGia" Type="decimal" Precision="18" Scale="0" />
     <Property Name="SoLuong" Type="int" />
   </EntityType>
@@ -41,13 +41,13 @@
     <Property Name="NhaCungCap" Type="nvarchar" MaxLength="250" />
     <Property Name="TienDaThanhToan" Type="decimal" Precision="18" Scale="0" />
   </EntityType>
-  <EntityType Name="VatTu">
+  <EntityType Name="SanPham">
     <Key>
-      <PropertyRef Name="MaVatTu" />
+      <PropertyRef Name="MaSanPham" />
     </Key>
-    <Property Name="MaVatTu" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="TenVatTu" Type="nvarchar" MaxLength="250" />
-    <Property Name="DonVi" Type="nvarchar" MaxLength="50" />
+    <Property Name="MaSanPham" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TenSanPham" Type="nvarchar" MaxLength="250" />
+    <Property Name="PhanLoai" Type="nvarchar" MaxLength="50" />
     <Property Name="HinhAnh" Type="image" />
     <Property Name="GhiChu" Type="nvarchar" MaxLength="2000" />
     <Property Name="HangSanXuat" Type="nvarchar" MaxLength="250" />
@@ -77,27 +77,27 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK_ChiTietNhapKho_VatTu">
-    <End Role="VatTu" Type="Self.VatTu" Multiplicity="0..1" />
+  <Association Name="FK_ChiTietNhapKho_SanPham">
+    <End Role="SanPham" Type="Self.SanPham" Multiplicity="0..1" />
     <End Role="ChiTietNhapKho" Type="Self.ChiTietNhapKho" Multiplicity="*" />
     <ReferentialConstraint>
-      <Principal Role="VatTu">
-        <PropertyRef Name="MaVatTu" />
+      <Principal Role="SanPham">
+        <PropertyRef Name="MaSanPham" />
       </Principal>
       <Dependent Role="ChiTietNhapKho">
-        <PropertyRef Name="MaVatTu" />
+        <PropertyRef Name="MaSanPham" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK_ChiTietXuatKho_VatTu">
-    <End Role="VatTu" Type="Self.VatTu" Multiplicity="0..1" />
+  <Association Name="FK_ChiTietXuatKho_SanPham">
+    <End Role="SanPham" Type="Self.SanPham" Multiplicity="0..1" />
     <End Role="ChiTietXuatKho" Type="Self.ChiTietXuatKho" Multiplicity="*" />
     <ReferentialConstraint>
-      <Principal Role="VatTu">
-        <PropertyRef Name="MaVatTu" />
+      <Principal Role="SanPham">
+        <PropertyRef Name="MaSanPham" />
       </Principal>
       <Dependent Role="ChiTietXuatKho">
-        <PropertyRef Name="MaVatTu" />
+        <PropertyRef Name="MaSanPham" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -137,23 +137,23 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <EntityContainer Name="WinQLVatTuModelStoreContainer">
+  <EntityContainer Name="WinQLSanPhamModelStoreContainer">
     <EntitySet Name="ChiTietNhapKho" EntityType="Self.ChiTietNhapKho" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="ChiTietXuatKho" EntityType="Self.ChiTietXuatKho" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="NhanVien" EntityType="Self.NhanVien" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="NhapKho" EntityType="Self.NhapKho" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="VatTu" EntityType="Self.VatTu" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SanPham" EntityType="Self.SanPham" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="XuatKho" EntityType="Self.XuatKho" Schema="dbo" store:Type="Tables" />
     <AssociationSet Name="FK_ChiTietNhapKho_NhapKho" Association="Self.FK_ChiTietNhapKho_NhapKho">
       <End Role="NhapKho" EntitySet="NhapKho" />
       <End Role="ChiTietNhapKho" EntitySet="ChiTietNhapKho" />
     </AssociationSet>
-    <AssociationSet Name="FK_ChiTietNhapKho_VatTu" Association="Self.FK_ChiTietNhapKho_VatTu">
-      <End Role="VatTu" EntitySet="VatTu" />
+    <AssociationSet Name="FK_ChiTietNhapKho_SanPham" Association="Self.FK_ChiTietNhapKho_SanPham">
+      <End Role="SanPham" EntitySet="SanPham" />
       <End Role="ChiTietNhapKho" EntitySet="ChiTietNhapKho" />
     </AssociationSet>
-    <AssociationSet Name="FK_ChiTietXuatKho_VatTu" Association="Self.FK_ChiTietXuatKho_VatTu">
-      <End Role="VatTu" EntitySet="VatTu" />
+    <AssociationSet Name="FK_ChiTietXuatKho_SanPham" Association="Self.FK_ChiTietXuatKho_SanPham">
+      <End Role="SanPham" EntitySet="SanPham" />
       <End Role="ChiTietXuatKho" EntitySet="ChiTietXuatKho" />
     </AssociationSet>
     <AssociationSet Name="FK_ChiTietXuatKho_XuatKho" Association="Self.FK_ChiTietXuatKho_XuatKho">

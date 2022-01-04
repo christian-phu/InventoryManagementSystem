@@ -12,18 +12,18 @@ namespace Win.Data
     using System;
     using System.Collections.Generic;
     
-    public partial class VatTu
+    public partial class SanPham
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public VatTu()
+        public SanPham()
         {
             this.ChiTietNhapKhoes = new HashSet<ChiTietNhapKho>();
             this.ChiTietXuatKhoes = new HashSet<ChiTietXuatKho>();
         }
     
-        public int MaVatTu { get; set; }
-        public string TenVatTu { get; set; }
-        public string DonVi { get; set; }
+        public int MaSanPham { get; set; }
+        public string TenSanPham { get; set; }
+        public string PhanLoai { get; set; }
         public byte[] HinhAnh { get; set; }
         public string GhiChu { get; set; }
         public string HangSanXuat { get; set; }

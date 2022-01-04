@@ -124,7 +124,7 @@
             // 
             // Column3
             // 
-            this.Column3.DataPropertyName = "TenVatTu";
+            this.Column3.DataPropertyName = "TenSanPham";
             this.Column3.HeaderText = "Vật tư";
             this.Column3.Name = "Column3";
             this.Column3.ReadOnly = true;

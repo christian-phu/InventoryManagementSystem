@@ -7,7 +7,7 @@ namespace Win
 {
     public partial class frmThongTinCaNhan : Form
     {
-        WinQLVatTuEntities db = new WinQLVatTuEntities();
+        WinQLSanPhamEntities db = new WinQLSanPhamEntities();
         public frmThongTinCaNhan()
         {
             InitializeComponent();

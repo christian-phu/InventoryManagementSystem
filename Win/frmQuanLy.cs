@@ -66,7 +66,7 @@ namespace Win
                 btnNhapKho.Enabled = true;
                 btnXuatKho.Enabled = true;
                 //btnThuHoi.Enabled = true;
-                btnVatTu.Enabled = true;
+                btnSanPham.Enabled = true;
                 btnBCNhapKho.Enabled = true;
                 btnBCTonKho.Enabled = true;
                 btnBCXuaKho.Enabled = true;
@@ -80,7 +80,7 @@ namespace Win
                 {
                     btnNhanVien.Enabled = false;
                     btnNhapKho.Enabled = false;
-                    btnVatTu.Enabled = false;
+                    btnSanPham.Enabled = false;
                     btnBCTonKho.Enabled = false;
                     btnBCNhapKho.Enabled = false;
                     //btnBaoHanh.Enabled = false;
@@ -99,7 +99,7 @@ namespace Win
                 btnNhapKho.Enabled = false;
                 btnXuatKho.Enabled = false;
                 //btnThuHoi.Enabled = false;
-                btnVatTu.Enabled = false;
+                btnSanPham.Enabled = false;
                 //btnYeuCau.Enabled = false;
                 btnBCNhapKho.Enabled = false;
                 btnBCTonKho.Enabled = false;
@@ -174,10 +174,10 @@ namespace Win
             form.Show();
         }
 
-        private void btnVatTu_ItemClick(object sender, ItemClickEventArgs e)
+        private void btnSanPham_ItemClick(object sender, ItemClickEventArgs e)
         {
             DongCacForm();
-            frmVatTu form = new frmVatTu();
+            frmSanPham form = new frmSanPham();
             form.MdiParent = this;
             form.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             form.Dock = DockStyle.Fill;

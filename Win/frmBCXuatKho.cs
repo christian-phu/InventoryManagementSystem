@@ -13,7 +13,7 @@ namespace Win
 {
     public partial class frmBCXuatKho : Form
     {
-        WinQLVatTuEntities db = new WinQLVatTuEntities();
+        WinQLSanPhamEntities db = new WinQLSanPhamEntities();
         frmDangNhap dn = new frmDangNhap();
         public frmBCXuatKho()
         {
@@ -32,7 +32,7 @@ namespace Win
             var tu = tuNgay.ToShortDateString();
             var den = denNgay.ToShortDateString();
 
-            dgView.DataSource = db.ChiTietXuatKhoes.Where(x => x.XuatKho.MaNhanVien == maKho && x.XuatKho.NgayThang >= tuNgay && x.XuatKho.NgayThang < denNgay && x.XuatKho.TrangThai == true).Select(x => new { x.XuatKho.MaNhanVien, x.XuatKho.NhanVien.HoTen, x.VatTu.TenVatTu, SoLuong = x.SoLuong.Value, NgayThayDoi = x.XuatKho.NgayThang.Value, TuNgay = tu, DenNgay = den, x.XuatKho.GhiChu }).ToList();
+            dgView.DataSource = db.ChiTietXuatKhoes.Where(x => x.XuatKho.MaNhanVien == maKho && x.XuatKho.NgayThang >= tuNgay && x.XuatKho.NgayThang < denNgay && x.XuatKho.TrangThai == true).Select(x => new { x.XuatKho.MaNhanVien, x.XuatKho.NhanVien.HoTen, x.SanPham.TenSanPham, SoLuong = x.SoLuong.Value, NgayThayDoi = x.XuatKho.NgayThang.Value, TuNgay = tu, DenNgay = den, x.XuatKho.GhiChu }).ToList();
         }
 
         private void btnIn_Click(object sender, EventArgs e)

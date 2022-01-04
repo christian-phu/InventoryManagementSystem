@@ -13,10 +13,10 @@ namespace Win.Data
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class WinQLVatTuEntities : DbContext
+    public partial class WinQLSanPhamEntities : DbContext
     {
-        public WinQLVatTuEntities()
-            : base("name=WinQLVatTuEntities")
+        public WinQLSanPhamEntities()
+            : base("name=WinQLSanPhamEntities")
         {
         }
     
@@ -29,7 +29,7 @@ namespace Win.Data
         public virtual DbSet<ChiTietXuatKho> ChiTietXuatKhoes { get; set; }
         public virtual DbSet<NhanVien> NhanViens { get; set; }
         public virtual DbSet<NhapKho> NhapKhoes { get; set; }
-        public virtual DbSet<VatTu> VatTus { get; set; }
+        public virtual DbSet<SanPham> SanPhams { get; set; }
         public virtual DbSet<XuatKho> XuatKhoes { get; set; }
     }
 }

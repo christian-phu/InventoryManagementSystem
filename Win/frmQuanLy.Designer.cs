@@ -40,7 +40,7 @@
             this.btnDoiMatKhau = new DevExpress.XtraBars.BarButtonItem();
             this.skinRibbonGalleryBarItem1 = new DevExpress.XtraBars.SkinRibbonGalleryBarItem();
             this.btnSkin = new DevExpress.XtraBars.SkinRibbonGalleryBarItem();
-            this.btnVatTu = new DevExpress.XtraBars.BarButtonItem();
+            this.btnSanPham = new DevExpress.XtraBars.BarButtonItem();
             this.btnBCTonKho = new DevExpress.XtraBars.BarButtonItem();
             this.btnBCNhapKho = new DevExpress.XtraBars.BarButtonItem();
             this.btnBCXuaKho = new DevExpress.XtraBars.BarButtonItem();
@@ -98,7 +98,7 @@
             this.btnDoiMatKhau,
             this.skinRibbonGalleryBarItem1,
             this.btnSkin,
-            this.btnVatTu,
+            this.btnSanPham,
             this.btnBCTonKho,
             this.btnBCNhapKho,
             this.btnBCXuaKho,
@@ -193,15 +193,15 @@
             this.btnSkin.Id = 9;
             this.btnSkin.Name = "btnSkin";
             // 
-            // btnVatTu
+            // btnSanPham
             // 
-            this.btnVatTu.Caption = "Quản lý sản phẩm";
-            this.btnVatTu.Id = 10;
-            this.btnVatTu.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnVatTu.ImageOptions.Image")));
-            this.btnVatTu.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnVatTu.ImageOptions.LargeImage")));
-            this.btnVatTu.LargeWidth = 80;
-            this.btnVatTu.Name = "btnVatTu";
-            this.btnVatTu.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnVatTu_ItemClick);
+            this.btnSanPham.Caption = "Quản lý sản phẩm";
+            this.btnSanPham.Id = 10;
+            this.btnSanPham.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnSanPham.ImageOptions.Image")));
+            this.btnSanPham.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnSanPham.ImageOptions.LargeImage")));
+            this.btnSanPham.LargeWidth = 80;
+            this.btnSanPham.Name = "btnSanPham";
+            this.btnSanPham.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnSanPham_ItemClick);
             // 
             // btnBCTonKho
             // 
@@ -309,7 +309,7 @@
             // ribbonPageGroup3
             // 
             this.ribbonPageGroup3.ItemLinks.Add(this.btnNhanVien);
-            this.ribbonPageGroup3.ItemLinks.Add(this.btnVatTu);
+            this.ribbonPageGroup3.ItemLinks.Add(this.btnSanPham);
             this.ribbonPageGroup3.Name = "ribbonPageGroup3";
             this.ribbonPageGroup3.Text = "Quản lý";
             // 
@@ -459,7 +459,7 @@
         private DevExpress.XtraBars.BarButtonItem btnDoiMatKhau;
         private DevExpress.XtraBars.SkinRibbonGalleryBarItem skinRibbonGalleryBarItem1;
         private DevExpress.XtraBars.SkinRibbonGalleryBarItem btnSkin;
-        private DevExpress.XtraBars.BarButtonItem btnVatTu;
+        private DevExpress.XtraBars.BarButtonItem btnSanPham;
         private DevExpress.XtraBars.BarButtonItem btnBCTonKho;
         private DevExpress.XtraBars.BarButtonItem btnBCNhapKho;
         private DevExpress.XtraBars.BarButtonItem btnBCXuaKho;

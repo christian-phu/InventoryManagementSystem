@@ -17,15 +17,15 @@ namespace Win.Data
     {
         public int MaChiTietXuatKho { get; set; }
         public Nullable<int> MaXuatKho { get; set; }
-        public Nullable<int> MaVatTu { get; set; }
+        public Nullable<int> MaSanPham { get; set; }
         public Nullable<decimal> DonGia { get; set; }
         public Nullable<int> SoLuong { get; set; }
     
-        public virtual VatTu VatTu { get; set; }
+        public virtual SanPham SanPham { get; set; }
         public virtual XuatKho XuatKho { get; set; }
 
         [NotMapped]
-        public string TenVatTu { get; set; }
+        public string TenSanPham { get; set; }
         [NotMapped]
         public decimal? ThanhTien { get; set; }
     }

@@ -14,7 +14,7 @@ namespace Win
 {
     public partial class frmDangNhap : DevExpress.XtraEditors.XtraForm
     {
-        WinQLVatTuEntities db = new WinQLVatTuEntities();
+        WinQLSanPhamEntities db = new WinQLSanPhamEntities();
         public static bool trangthai = false;
         public static string quyen = "";
         public static string taikhoan = "";

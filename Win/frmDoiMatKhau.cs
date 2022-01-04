@@ -13,7 +13,7 @@ namespace Win
 {
     public partial class frmDoiMatKhau : Form
     {
-        WinQLVatTuEntities db = new WinQLVatTuEntities();
+        WinQLSanPhamEntities db = new WinQLSanPhamEntities();
         public frmDoiMatKhau()
         {
             InitializeComponent();

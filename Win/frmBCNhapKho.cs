@@ -13,7 +13,7 @@ namespace Win
 {
     public partial class frmBCNhapKho : Form
     {
-        WinQLVatTuEntities db = new WinQLVatTuEntities();
+        WinQLSanPhamEntities db = new WinQLSanPhamEntities();
         frmDangNhap dn = new frmDangNhap();
         public frmBCNhapKho()
         {
@@ -31,7 +31,7 @@ namespace Win
             var tu = tuNgay.ToShortDateString();
             var den = denNgay.ToShortDateString();
 
-            dgView.DataSource = db.ChiTietNhapKhoes.Where(x => x.NhapKho.MaNhanVien == ma && x.NhapKho.NgayThang >= tuNgay && x.NhapKho.NgayThang < denNgay).Select(x => new { x.NhapKho.MaNhanVien, x.NhapKho.NhanVien.HoTen, x.VatTu.TenVatTu, SoLuong = x.SoLuong.Value, NgayThayDoi = x.NhapKho.NgayThang.Value, TuNgay = tu, DenNgay = den, x.NhapKho.GhiChu }).ToList();
+            dgView.DataSource = db.ChiTietNhapKhoes.Where(x => x.NhapKho.MaNhanVien == ma && x.NhapKho.NgayThang >= tuNgay && x.NhapKho.NgayThang < denNgay).Select(x => new { x.NhapKho.MaNhanVien, x.NhapKho.NhanVien.HoTen, x.SanPham.TenSanPham, SoLuong = x.SoLuong.Value, NgayThayDoi = x.NhapKho.NgayThang.Value, TuNgay = tu, DenNgay = den, x.NhapKho.GhiChu }).ToList();
         }
 
         private void btnIn_Click(object sender, EventArgs e)

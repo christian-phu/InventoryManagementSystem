@@ -283,7 +283,7 @@ namespace Win.DAL {
             
             private global::System.Data.DataColumn columnHoTen;
             
-            private global::System.Data.DataColumn columnTenVatTu;
+            private global::System.Data.DataColumn columnTenSanPham;
             
             private global::System.Data.DataColumn columnSoLuong;
             
@@ -346,9 +346,9 @@ namespace Win.DAL {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn TenVatTuColumn {
+            public global::System.Data.DataColumn TenSanPhamColumn {
                 get {
-                    return this.columnTenVatTu;
+                    return this.columnTenSanPham;
                 }
             }
             
@@ -429,12 +429,12 @@ namespace Win.DAL {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public TonKhoRow AddTonKhoRow(string TenKho, string HoTen, string TenVatTu, string SoLuong, string GhiChu, string TuNgay, string DenNgay, string NgayThayDoi) {
+            public TonKhoRow AddTonKhoRow(string TenKho, string HoTen, string TenSanPham, string SoLuong, string GhiChu, string TuNgay, string DenNgay, string NgayThayDoi) {
                 TonKhoRow rowTonKhoRow = ((TonKhoRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         TenKho,
                         HoTen,
-                        TenVatTu,
+                        TenSanPham,
                         SoLuong,
                         GhiChu,
                         TuNgay,
@@ -464,7 +464,7 @@ namespace Win.DAL {
             internal void InitVars() {
                 this.columnTenKho = base.Columns["TenKho"];
                 this.columnHoTen = base.Columns["HoTen"];
-                this.columnTenVatTu = base.Columns["TenVatTu"];
+                this.columnTenSanPham = base.Columns["TenSanPham"];
                 this.columnSoLuong = base.Columns["SoLuong"];
                 this.columnGhiChu = base.Columns["GhiChu"];
                 this.columnTuNgay = base.Columns["TuNgay"];
@@ -479,8 +479,8 @@ namespace Win.DAL {
                 base.Columns.Add(this.columnTenKho);
                 this.columnHoTen = new global::System.Data.DataColumn("HoTen", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnHoTen);
-                this.columnTenVatTu = new global::System.Data.DataColumn("TenVatTu", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnTenVatTu);
+                this.columnTenSanPham = new global::System.Data.DataColumn("TenSanPham", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTenSanPham);
                 this.columnSoLuong = new global::System.Data.DataColumn("SoLuong", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnSoLuong);
                 this.columnGhiChu = new global::System.Data.DataColumn("GhiChu", typeof(string), null, global::System.Data.MappingType.Element);
@@ -665,17 +665,17 @@ namespace Win.DAL {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string TenVatTu {
+            public string TenSanPham {
                 get {
                     try {
-                        return ((string)(this[this.tableTonKho.TenVatTuColumn]));
+                        return ((string)(this[this.tableTonKho.TenSanPhamColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'TenVatTu\' in table \'TonKho\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'TenSanPham\' in table \'TonKho\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableTonKho.TenVatTuColumn] = value;
+                    this[this.tableTonKho.TenSanPhamColumn] = value;
                 }
             }
             
@@ -785,14 +785,14 @@ namespace Win.DAL {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsTenVatTuNull() {
-                return this.IsNull(this.tableTonKho.TenVatTuColumn);
+            public bool IsTenSanPhamNull() {
+                return this.IsNull(this.tableTonKho.TenSanPhamColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetTenVatTuNull() {
-                this[this.tableTonKho.TenVatTuColumn] = global::System.Convert.DBNull;
+            public void SetTenSanPhamNull() {
+                this[this.tableTonKho.TenSanPhamColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]

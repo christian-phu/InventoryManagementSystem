@@ -14,7 +14,7 @@ namespace Win
 {
     public partial class frmNhapKho : Form
     {
-        WinQLVatTuEntities db = new WinQLVatTuEntities();
+        WinQLSanPhamEntities db = new WinQLSanPhamEntities();
         public static List<ChiTietNhapKho> chiTiet = new List<ChiTietNhapKho>();
 
         frmDangNhap dn = new frmDangNhap();
@@ -31,7 +31,7 @@ namespace Win
             btnLuu.Enabled = false;
             btnXoa.Enabled = false;
 
-            cbbKhoVatTu.Enabled = true;
+            cbbKhoSanPham.Enabled = true;
         }
 
         private void Sua()
@@ -41,7 +41,7 @@ namespace Win
             btnLuu.Enabled = true;
             btnXoa.Enabled = true;
 
-            cbbKhoVatTu.Enabled = false;
+            cbbKhoSanPham.Enabled = false;
         }
 
         private void ThemChiTiet()
@@ -49,7 +49,7 @@ namespace Win
             btnThemChiTiet.Enabled = true;
             btnLuuChiTiet.Enabled = false;
             btnXoaChiTiet.Enabled = false;
-            txtVatTu.Enabled = true;
+            txtSanPham.Enabled = true;
         }
 
         private void SuaChiTiet()
@@ -57,7 +57,7 @@ namespace Win
             btnThemChiTiet.Enabled = false;
             btnLuuChiTiet.Enabled = true;
             btnXoaChiTiet.Enabled = true;
-            txtVatTu.Enabled = false;
+            txtSanPham.Enabled = false;
         }
 
         private void LamMoi()
@@ -83,7 +83,7 @@ namespace Win
 
             try
             {
-                cbbKhoVatTu.Text = dn.MaNhanVien() + "-" + dn.TaiKhoan();
+                cbbKhoSanPham.Text = dn.MaNhanVien() + "-" + dn.TaiKhoan();
             }
             catch
             {
@@ -94,7 +94,7 @@ namespace Win
             dgChiTiet.AutoGenerateColumns = false;
             dgChiTiet.DataSource = null;
 
-            db = new WinQLVatTuEntities();
+            db = new WinQLSanPhamEntities();
         }
 
         private void LoadDuLieu()
@@ -106,17 +106,17 @@ namespace Win
             dgvDuLieu.DataSource = bs;
 
             AutoCompleteStringCollection autoComplete = new AutoCompleteStringCollection();
-            autoComplete.AddRange(db.VatTus.Select(x => x.TenVatTu + "~" + x.MaVatTu).ToArray());
+            autoComplete.AddRange(db.SanPhams.Select(x => x.TenSanPham + "~" + x.MaSanPham).ToArray());
 
-            txtVatTu.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
-            txtVatTu.AutoCompleteSource = AutoCompleteSource.CustomSource;
-            txtVatTu.AutoCompleteCustomSource = autoComplete;
+            txtSanPham.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+            txtSanPham.AutoCompleteSource = AutoCompleteSource.CustomSource;
+            txtSanPham.AutoCompleteCustomSource = autoComplete;
         }
 
         private void LoadCombobox()
         {
             var manv = dn.MaNhanVien();
-            cbbKhoVatTu.DataSource = db.NhanViens.Where(x => x.MaNhanVien == manv).Select(x => x.MaNhanVien + "-" + x.HoTen).ToList();
+            cbbKhoSanPham.DataSource = db.NhanViens.Where(x => x.MaNhanVien == manv).Select(x => x.MaNhanVien + "-" + x.HoTen).ToList();
         }
 
         private void frmTaiKhoan_Load(object sender, EventArgs e)
@@ -137,14 +137,14 @@ namespace Win
                 txtMaNhap.Text = obj.MaNhapKho.ToString();
                 txtGhiChu.Text = obj.GhiChu;
                 txtNgayNhap.Text = obj.NgayThang.Value.ToShortDateString();
-                cbbKhoVatTu.Text = obj.MaNhanVien + "-" + obj.NhanVien.HoTen;
+                cbbKhoSanPham.Text = obj.MaNhanVien + "-" + obj.NhanVien.HoTen;
                 txtNhaCungCap.Text = obj.NhaCungCap;
                 lblTongTien.Text = obj.ChiTietNhapKhoes.Sum(x => x.DonGia * x.SoLuong).ToString();
 
                 var list = db.ChiTietNhapKhoes.AsNoTracking().Where(x => x.MaNhapKho == ma).ToList();
-                chiTiet = list.Select(x => new ChiTietNhapKho { MaChiTietNhapKho = x.MaChiTietNhapKho, MaNhapKho = x.MaNhapKho, MaVatTu = x.MaVatTu, SoLuong = x.SoLuong, TenVatTu = x.VatTu.TenVatTu, ThanhTien = x.DonGia * x.SoLuong, DonGia = x.DonGia }).ToList();
+                chiTiet = list.Select(x => new ChiTietNhapKho { MaChiTietNhapKho = x.MaChiTietNhapKho, MaNhapKho = x.MaNhapKho, MaSanPham = x.MaSanPham, SoLuong = x.SoLuong, TenSanPham = x.SanPham.TenSanPham, ThanhTien = x.DonGia * x.SoLuong, DonGia = x.DonGia }).ToList();
                 dgChiTiet.AutoGenerateColumns = false;
-                dgChiTiet.DataSource = chiTiet.Select(x => new { x.MaChiTietNhapKho, x.TenVatTu, x.SoLuong, x.DonGia, x.ThanhTien }).ToList();
+                dgChiTiet.DataSource = chiTiet.Select(x => new { x.MaChiTietNhapKho, x.TenSanPham, x.SoLuong, x.DonGia, x.ThanhTien }).ToList();
 
                 Sua();
                 TongTien();
@@ -167,11 +167,11 @@ namespace Win
                 var chitiets = db.ChiTietNhapKhoes.Where(x => x.MaNhapKho == obj.MaNhapKho).ToList();
                 chitiets.ForEach(item =>
                 {
-                    var vatTu = db.VatTus.FirstOrDefault(x => x.MaVatTu == item.MaVatTu);
-                    vatTu.SoLuong += item.SoLuong;
+                    var SanPham = db.SanPhams.FirstOrDefault(x => x.MaSanPham == item.MaSanPham);
+                    SanPham.SoLuong += item.SoLuong;
 
-                    db.VatTus.Attach(vatTu);
-                    db.Entry(vatTu).State = System.Data.Entity.EntityState.Modified;
+                    db.SanPhams.Attach(SanPham);
+                    db.Entry(SanPham).State = System.Data.Entity.EntityState.Modified;
                     db.SaveChanges();
 
                     db.ChiTietNhapKhoes.Attach(item);
@@ -201,14 +201,14 @@ namespace Win
                 var ma = int.Parse(txtMaNhap.Text);
                 var obj = db.NhapKhoes.FirstOrDefault(x => x.MaNhapKho == ma);
 
-                if (cbbKhoVatTu.Text == "" || chiTiet.Count == 0)
+                if (cbbKhoSanPham.Text == "" || chiTiet.Count == 0)
                 {
                     MessageBox.Show("Nhập đầy đủ thông tin!");
                     return;
                 }
 
                 obj.GhiChu = txtGhiChu.Text;
-                obj.MaNhanVien = int.Parse(cbbKhoVatTu.Text.Split('-')[0].ToString().Trim());
+                obj.MaNhanVien = int.Parse(cbbKhoSanPham.Text.Split('-')[0].ToString().Trim());
                 obj.NhaCungCap = txtNhaCungCap.Text;
                 obj.NgayThang = DateTime.Parse(txtNgayNhap.Text);
 
@@ -216,11 +216,11 @@ namespace Win
                 var chitiets = db.ChiTietNhapKhoes.Where(x => x.MaNhapKho == obj.MaNhapKho).ToList();
                 chitiets.ForEach(item =>
                 {
-                    var vatTu = db.VatTus.FirstOrDefault(x => x.MaVatTu == item.MaVatTu);
-                    vatTu.SoLuong -= item.SoLuong;
+                    var SanPham = db.SanPhams.FirstOrDefault(x => x.MaSanPham == item.MaSanPham);
+                    SanPham.SoLuong -= item.SoLuong;
 
-                    db.VatTus.Attach(vatTu);
-                    db.Entry(vatTu).State = System.Data.Entity.EntityState.Modified;
+                    db.SanPhams.Attach(SanPham);
+                    db.Entry(SanPham).State = System.Data.Entity.EntityState.Modified;
                     db.SaveChanges();
 
                     db.ChiTietNhapKhoes.Attach(item);
@@ -239,7 +239,7 @@ namespace Win
                     var chitetnhap = new ChiTietNhapKho
                     {
                         MaNhapKho = obj.MaNhapKho,
-                        MaVatTu = item.MaVatTu,
+                        MaSanPham = item.MaSanPham,
                         SoLuong = item.SoLuong,
                         DonGia = item.DonGia
                     };
@@ -247,11 +247,11 @@ namespace Win
                     db.ChiTietNhapKhoes.Add(chitetnhap);
                     db.SaveChanges();
 
-                    var vatTu = db.VatTus.FirstOrDefault(x => x.MaVatTu == item.MaVatTu);
-                    vatTu.SoLuong += item.SoLuong;
+                    var SanPham = db.SanPhams.FirstOrDefault(x => x.MaSanPham == item.MaSanPham);
+                    SanPham.SoLuong += item.SoLuong;
 
-                    db.VatTus.Attach(vatTu);
-                    db.Entry(vatTu).State = System.Data.Entity.EntityState.Modified;
+                    db.SanPhams.Attach(SanPham);
+                    db.Entry(SanPham).State = System.Data.Entity.EntityState.Modified;
                     db.SaveChanges();
                 });
 
@@ -270,7 +270,7 @@ namespace Win
             try
             {
                 var loai = DateTime.Now.ToString("HHmmssff");
-                if (txtMaNhap.Text == "" || cbbKhoVatTu.Text == "" || chiTiet.Count == 0)
+                if (txtMaNhap.Text == "" || cbbKhoSanPham.Text == "" || chiTiet.Count == 0)
                 {
                     MessageBox.Show("Nhập đầy đủ thông tin!");
                     return;
@@ -278,7 +278,7 @@ namespace Win
 
                 var obj = new NhapKho
                 {
-                    MaNhanVien = int.Parse(cbbKhoVatTu.Text.Split('-')[0].ToString().Trim()),
+                    MaNhanVien = int.Parse(cbbKhoSanPham.Text.Split('-')[0].ToString().Trim()),
                     NhaCungCap = txtNhaCungCap.Text,
                     GhiChu = txtGhiChu.Text,
                     NgayThang = DateTime.Parse(txtNgayNhap.Text)
@@ -292,7 +292,7 @@ namespace Win
                     var chitetnhap = new ChiTietNhapKho
                     {
                         MaNhapKho = obj.MaNhapKho,
-                        MaVatTu = item.MaVatTu,
+                        MaSanPham = item.MaSanPham,
                         SoLuong = item.SoLuong,
                         DonGia = item.DonGia
                     };
@@ -300,11 +300,11 @@ namespace Win
                     db.ChiTietNhapKhoes.Add(chitetnhap);
                     db.SaveChanges();
 
-                    var vatTu = db.VatTus.FirstOrDefault(x => x.MaVatTu == item.MaVatTu);
-                    vatTu.SoLuong += item.SoLuong;
+                    var SanPham = db.SanPhams.FirstOrDefault(x => x.MaSanPham == item.MaSanPham);
+                    SanPham.SoLuong += item.SoLuong;
 
-                    db.VatTus.Attach(vatTu);
-                    db.Entry(vatTu).State = System.Data.Entity.EntityState.Modified;
+                    db.SanPhams.Attach(SanPham);
+                    db.Entry(SanPham).State = System.Data.Entity.EntityState.Modified;
                     db.SaveChanges();
 
                 });
@@ -351,8 +351,8 @@ namespace Win
         {
             try
             {
-                var maSp = int.Parse(txtVatTu.Text.Split('~')[1].ToString().Trim());
-                if (chiTiet.Any(x => x.MaVatTu == maSp))
+                var maSp = int.Parse(txtSanPham.Text.Split('~')[1].ToString().Trim());
+                if (chiTiet.Any(x => x.MaSanPham == maSp))
                 {
                     MessageBox.Show("Sản phẩm này đã có trong danh sách!");
                 }
@@ -361,9 +361,9 @@ namespace Win
                     var chitet = new ChiTietNhapKho
                     {
                         MaChiTietNhapKho = int.Parse(DateTime.Now.ToString("HHmmssff")),
-                        MaVatTu = maSp,
+                        MaSanPham = maSp,
                         SoLuong = int.Parse(txtSoLuong.Text),
-                        TenVatTu = txtVatTu.Text.Split('~')[0].ToString(),
+                        TenSanPham = txtSanPham.Text.Split('~')[0].ToString(),
                         DonGia = int.Parse(txtDonGia.Text),
                         ThanhTien = int.Parse(txtSoLuong.Text) * int.Parse(txtDonGia.Text)
                     };
@@ -371,7 +371,7 @@ namespace Win
                     chiTiet.Add(chitet);
                     dgChiTiet.DataSource = null;
                     dgChiTiet.AutoGenerateColumns = false;
-                    dgChiTiet.DataSource = chiTiet.Select(x => new { x.MaChiTietNhapKho, x.TenVatTu, x.SoLuong, x.DonGia, x.ThanhTien }).ToList();
+                    dgChiTiet.DataSource = chiTiet.Select(x => new { x.MaChiTietNhapKho, x.TenSanPham, x.SoLuong, x.DonGia, x.ThanhTien }).ToList();
 
                     LamMoiChiTiet();
                     TongTien();
@@ -388,12 +388,12 @@ namespace Win
         {
             try
             {
-                var maSp = int.Parse(txtVatTu.Text.Split('~')[1].ToString().Trim());
+                var maSp = int.Parse(txtSanPham.Text.Split('~')[1].ToString().Trim());
                 chiTiet.ForEach(item =>
                     {
                         if (item.MaChiTietNhapKho == maChiTiet)
                         {
-                            item.MaVatTu = int.Parse(txtVatTu.Text.Split('~')[1].ToString().Trim());
+                            item.MaSanPham = int.Parse(txtSanPham.Text.Split('~')[1].ToString().Trim());
                             item.SoLuong = int.Parse(txtSoLuong.Text);
                             item.DonGia = int.Parse(txtDonGia.Text);
                             item.ThanhTien = int.Parse(txtSoLuong.Text) * int.Parse(txtDonGia.Text);
@@ -402,7 +402,7 @@ namespace Win
 
                 dgChiTiet.DataSource = null;
                 dgChiTiet.AutoGenerateColumns = false;
-                dgChiTiet.DataSource = chiTiet.Select(x => new { x.MaChiTietNhapKho, x.TenVatTu, x.SoLuong, x.DonGia, x.ThanhTien }).ToList();
+                dgChiTiet.DataSource = chiTiet.Select(x => new { x.MaChiTietNhapKho, x.TenSanPham, x.SoLuong, x.DonGia, x.ThanhTien }).ToList();
 
                 LamMoiChiTiet();
                 TongTien();
@@ -424,7 +424,7 @@ namespace Win
                 chiTiet.Remove(chitet);
                 dgChiTiet.DataSource = null;
                 dgChiTiet.AutoGenerateColumns = false;
-                dgChiTiet.DataSource = chiTiet.Select(x => new { x.MaChiTietNhapKho, x.TenVatTu, x.SoLuong, x.DonGia, x.ThanhTien }).ToList();
+                dgChiTiet.DataSource = chiTiet.Select(x => new { x.MaChiTietNhapKho, x.TenSanPham, x.SoLuong, x.DonGia, x.ThanhTien }).ToList();
 
                 LamMoiChiTiet();
                 TongTien();
@@ -446,7 +446,7 @@ namespace Win
                 {
                     maChiTiet = int.Parse(dgChiTiet[0, HangChon].Value.ToString());
                     var chitet = chiTiet.FirstOrDefault(x => x.MaChiTietNhapKho == maChiTiet);
-                    txtVatTu.Text = chitet.TenVatTu + "~" + chitet.MaVatTu;
+                    txtSanPham.Text = chitet.TenSanPham + "~" + chitet.MaSanPham;
                     txtSoLuong.Text = chitet.SoLuong.ToString();
                     txtDonGia.Text = chitet.DonGia.ToString();
                     SuaChiTiet();
@@ -469,7 +469,7 @@ namespace Win
         {
             ThemChiTiet();
             txtSoLuong.Text = "1";
-            txtVatTu.Text = "";
+            txtSanPham.Text = "";
             txtDonGia.Text = "";
             TinhTien();
         }
@@ -479,12 +479,12 @@ namespace Win
             e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
         }
 
-        private void txtVatTu_TextChanged(object sender, EventArgs e)
+        private void txtSanPham_TextChanged(object sender, EventArgs e)
         {
             try
             {
-                var maSp = int.Parse(txtVatTu.Text.Split('~')[1].ToString().Trim());
-                var obj = db.VatTus.FirstOrDefault(x => x.MaVatTu == maSp);
+                var maSp = int.Parse(txtSanPham.Text.Split('~')[1].ToString().Trim());
+                var obj = db.SanPhams.FirstOrDefault(x => x.MaSanPham == maSp);
                 txtDonGia.Text = obj.DonGia.ToString();
                 TinhTien();
             }
@@ -523,6 +523,11 @@ namespace Win
         private void txtDonGia_TextChanged(object sender, EventArgs e)
         {
             TinhTien();
+        }
+
+        private void groupBox3_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }

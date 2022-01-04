@@ -1,30 +1,30 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-  <EntityContainerMapping StorageEntityContainer="WinQLVatTuModelStoreContainer" CdmEntityContainer="WinQLVatTuEntities">
+  <EntityContainerMapping StorageEntityContainer="WinQLSanPhamModelStoreContainer" CdmEntityContainer="WinQLSanPhamEntities">
     <EntitySetMapping Name="ChiTietNhapKhoes">
-      <EntityTypeMapping TypeName="WinQLVatTuModel.ChiTietNhapKho">
+      <EntityTypeMapping TypeName="WinQLSanPhamModel.ChiTietNhapKho">
         <MappingFragment StoreEntitySet="ChiTietNhapKho">
           <ScalarProperty Name="MaChiTietNhapKho" ColumnName="MaChiTietNhapKho" />
           <ScalarProperty Name="MaNhapKho" ColumnName="MaNhapKho" />
-          <ScalarProperty Name="MaVatTu" ColumnName="MaVatTu" />
+          <ScalarProperty Name="MaSanPham" ColumnName="MaSanPham" />
           <ScalarProperty Name="DonGia" ColumnName="DonGia" />
           <ScalarProperty Name="SoLuong" ColumnName="SoLuong" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="ChiTietXuatKhoes">
-      <EntityTypeMapping TypeName="WinQLVatTuModel.ChiTietXuatKho">
+      <EntityTypeMapping TypeName="WinQLSanPhamModel.ChiTietXuatKho">
         <MappingFragment StoreEntitySet="ChiTietXuatKho">
           <ScalarProperty Name="MaChiTietXuatKho" ColumnName="MaChiTietXuatKho" />
           <ScalarProperty Name="MaXuatKho" ColumnName="MaXuatKho" />
-          <ScalarProperty Name="MaVatTu" ColumnName="MaVatTu" />
+          <ScalarProperty Name="MaSanPham" ColumnName="MaSanPham" />
           <ScalarProperty Name="DonGia" ColumnName="DonGia" />
           <ScalarProperty Name="SoLuong" ColumnName="SoLuong" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="NhanViens">
-      <EntityTypeMapping TypeName="WinQLVatTuModel.NhanVien">
+      <EntityTypeMapping TypeName="WinQLSanPhamModel.NhanVien">
         <MappingFragment StoreEntitySet="NhanVien">
           <ScalarProperty Name="MaNhanVien" ColumnName="MaNhanVien" />
           <ScalarProperty Name="HoTen" ColumnName="HoTen" />
@@ -35,7 +35,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="NhapKhoes">
-      <EntityTypeMapping TypeName="WinQLVatTuModel.NhapKho">
+      <EntityTypeMapping TypeName="WinQLSanPhamModel.NhapKho">
         <MappingFragment StoreEntitySet="NhapKho">
           <ScalarProperty Name="MaNhapKho" ColumnName="MaNhapKho" />
           <ScalarProperty Name="MaNhanVien" ColumnName="MaNhanVien" />
@@ -46,13 +46,13 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="VatTus">
-      <EntityTypeMapping TypeName="WinQLVatTuModel.VatTu">
-        <MappingFragment StoreEntitySet="VatTu">
+    <EntitySetMapping Name="SanPhams">
+      <EntityTypeMapping TypeName="WinQLSanPhamModel.SanPham">
+        <MappingFragment StoreEntitySet="SanPham">
           <ScalarProperty Name="SoLuong" ColumnName="SoLuong" />
-          <ScalarProperty Name="MaVatTu" ColumnName="MaVatTu" />
-          <ScalarProperty Name="TenVatTu" ColumnName="TenVatTu" />
-          <ScalarProperty Name="DonVi" ColumnName="DonVi" />
+          <ScalarProperty Name="MaSanPham" ColumnName="MaSanPham" />
+          <ScalarProperty Name="TenSanPham" ColumnName="TenSanPham" />
+          <ScalarProperty Name="PhanLoai" ColumnName="PhanLoai" />
           <ScalarProperty Name="HinhAnh" ColumnName="HinhAnh" />
           <ScalarProperty Name="GhiChu" ColumnName="GhiChu" />
           <ScalarProperty Name="HangSanXuat" ColumnName="HangSanXuat" />
@@ -61,7 +61,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="XuatKhoes">
-      <EntityTypeMapping TypeName="WinQLVatTuModel.XuatKho">
+      <EntityTypeMapping TypeName="WinQLSanPhamModel.XuatKho">
         <MappingFragment StoreEntitySet="XuatKho">
           <ScalarProperty Name="MaXuatKho" ColumnName="MaXuatKho" />
           <ScalarProperty Name="MaNhanVien" ColumnName="MaNhanVien" />

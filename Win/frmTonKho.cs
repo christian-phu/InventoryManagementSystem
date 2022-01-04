@@ -13,7 +13,7 @@ namespace Win
 {
     public partial class frmTonKho : Form
     {
-        WinQLVatTuEntities db = new WinQLVatTuEntities();
+        WinQLSanPhamEntities db = new WinQLSanPhamEntities();
         frmDangNhap dn = new frmDangNhap();
         public frmTonKho()
         {
@@ -23,7 +23,7 @@ namespace Win
         private void btnThongKe_Click(object sender, EventArgs e)
         {
             dgView.AutoGenerateColumns = false;
-            dgView.DataSource = db.VatTus.Where(x => x.SoLuong > 0).Select(x => new { x.TenVatTu, SoLuong = x.SoLuong.Value }).ToList();
+            dgView.DataSource = db.SanPhams.Where(x => x.SoLuong > 0).Select(x => new { x.TenSanPham, SoLuong = x.SoLuong.Value }).ToList();
         }
 
         private void btnIn_Click(object sender, EventArgs e)

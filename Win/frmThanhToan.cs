@@ -13,7 +13,7 @@ namespace Win
 {
     public partial class frmThanhToan : Form
     {
-        WinQLVatTuEntities db = new WinQLVatTuEntities();
+        WinQLSanPhamEntities db = new WinQLSanPhamEntities();
         frmDangNhap dn = new frmDangNhap();
         public frmThanhToan()
         {
@@ -33,7 +33,7 @@ namespace Win
 
             var list = db.ChiTietNhapKhoes.Where(x => x.NhapKho.MaNhanVien == ma && x.NhapKho.NgayThang >= tuNgay && x.NhapKho.NgayThang < denNgay).ToList();
             var tong = list.Sum(x => x.DonGia.Value * x.SoLuong.Value);
-            var data = list.Select(x => new { MaNhanVien = x.NhapKho.MaNhanVien.Value, x.NhapKho.NhanVien.HoTen, x.VatTu.TenVatTu, SoLuong = x.SoLuong.Value, NgayThayDoi = x.NhapKho.NgayThang.Value, TuNgay = tu, DenNgay = den, x.NhapKho.GhiChu, DonGia = x.DonGia.Value, ThanhTien = x.SoLuong.Value * x.DonGia.Value, TongTien = tong }).ToList();
+            var data = list.Select(x => new { MaNhanVien = x.NhapKho.MaNhanVien.Value, x.NhapKho.NhanVien.HoTen, x.SanPham.TenSanPham, SoLuong = x.SoLuong.Value, NgayThayDoi = x.NhapKho.NgayThang.Value, TuNgay = tu, DenNgay = den, x.NhapKho.GhiChu, DonGia = x.DonGia.Value, ThanhTien = x.SoLuong.Value * x.DonGia.Value, TongTien = tong }).ToList();
             lblTongTien.Text = tong.ToString();
             dgView.DataSource = data;
         }

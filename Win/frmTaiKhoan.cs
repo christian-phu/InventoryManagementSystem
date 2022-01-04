@@ -13,7 +13,7 @@ namespace Win
 {
     public partial class frmTaiKhoan : Form
     {
-        WinQLVatTuEntities db = new WinQLVatTuEntities();
+        WinQLSanPhamEntities db = new WinQLSanPhamEntities();
         frmDangNhap dn = new frmDangNhap();
         public static int maNhanVien = 0;
 
