@@ -327,5 +327,10 @@ namespace Win
         {
             System.Diagnostics.Process.Start("https://docs.google.com/spreadsheets/d/17nc1NGTVbhrt7ZGm4HcZsCwJGVnn0aHyH0dRyf6RGCk/edit#gid=294394684");
         }
+
+        private void barButtonItem4_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://form.jotform.com/jrymatix/gomchambautruc");
+        }
     }
 }
