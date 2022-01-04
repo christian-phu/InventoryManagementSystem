@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmBCXuatKho));
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -67,6 +68,8 @@
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.groupBox2);
+            this.splitContainer1.Panel2.Controls.Add(this.btnThongKe);
+            this.splitContainer1.Panel2.Controls.Add(this.btnIn);
             this.splitContainer1.Size = new System.Drawing.Size(1019, 468);
             this.splitContainer1.SplitterDistance = 63;
             this.splitContainer1.TabIndex = 0;
@@ -77,8 +80,6 @@
             this.groupBox1.Controls.Add(this.dtpDenNgay);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.dtpTuNgay);
-            this.groupBox1.Controls.Add(this.btnIn);
-            this.groupBox1.Controls.Add(this.btnThongKe);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.cbbKho);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -92,7 +93,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(535, 34);
+            this.label3.Location = new System.Drawing.Point(477, 35);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(56, 13);
             this.label3.TabIndex = 11;
@@ -101,7 +102,7 @@
             // dtpDenNgay
             // 
             this.dtpDenNgay.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpDenNgay.Location = new System.Drawing.Point(597, 31);
+            this.dtpDenNgay.Location = new System.Drawing.Point(539, 32);
             this.dtpDenNgay.Name = "dtpDenNgay";
             this.dtpDenNgay.Size = new System.Drawing.Size(136, 20);
             this.dtpDenNgay.TabIndex = 10;
@@ -109,7 +110,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(336, 34);
+            this.label2.Location = new System.Drawing.Point(278, 35);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(49, 13);
             this.label2.TabIndex = 9;
@@ -118,16 +119,18 @@
             // dtpTuNgay
             // 
             this.dtpTuNgay.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpTuNgay.Location = new System.Drawing.Point(388, 31);
+            this.dtpTuNgay.Location = new System.Drawing.Point(330, 32);
             this.dtpTuNgay.Name = "dtpTuNgay";
             this.dtpTuNgay.Size = new System.Drawing.Size(136, 20);
             this.dtpTuNgay.TabIndex = 8;
             // 
             // btnIn
             // 
-            this.btnIn.Location = new System.Drawing.Point(826, 29);
+            this.btnIn.Image = ((System.Drawing.Image)(resources.GetObject("btnIn.Image")));
+            this.btnIn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnIn.Location = new System.Drawing.Point(256, 12);
             this.btnIn.Name = "btnIn";
-            this.btnIn.Size = new System.Drawing.Size(75, 23);
+            this.btnIn.Size = new System.Drawing.Size(143, 43);
             this.btnIn.TabIndex = 3;
             this.btnIn.Text = "In";
             this.btnIn.UseVisualStyleBackColor = true;
@@ -135,9 +138,11 @@
             // 
             // btnThongKe
             // 
-            this.btnThongKe.Location = new System.Drawing.Point(745, 29);
+            this.btnThongKe.Image = ((System.Drawing.Image)(resources.GetObject("btnThongKe.Image")));
+            this.btnThongKe.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnThongKe.Location = new System.Drawing.Point(93, 12);
             this.btnThongKe.Name = "btnThongKe";
-            this.btnThongKe.Size = new System.Drawing.Size(75, 23);
+            this.btnThongKe.Size = new System.Drawing.Size(143, 43);
             this.btnThongKe.TabIndex = 2;
             this.btnThongKe.Text = "Thống kê";
             this.btnThongKe.UseVisualStyleBackColor = true;
@@ -158,16 +163,18 @@
             this.cbbKho.FormattingEnabled = true;
             this.cbbKho.Location = new System.Drawing.Point(93, 31);
             this.cbbKho.Name = "cbbKho";
-            this.cbbKho.Size = new System.Drawing.Size(214, 21);
+            this.cbbKho.Size = new System.Drawing.Size(155, 21);
             this.cbbKho.TabIndex = 0;
             // 
             // groupBox2
             // 
+            this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox2.Controls.Add(this.dgView);
-            this.groupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox2.Location = new System.Drawing.Point(0, 0);
+            this.groupBox2.Location = new System.Drawing.Point(0, 61);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(1019, 401);
+            this.groupBox2.Size = new System.Drawing.Size(1019, 340);
             this.groupBox2.TabIndex = 0;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Thống kê ";
@@ -187,7 +194,7 @@
             this.dgView.Location = new System.Drawing.Point(3, 16);
             this.dgView.Name = "dgView";
             this.dgView.ReadOnly = true;
-            this.dgView.Size = new System.Drawing.Size(1013, 382);
+            this.dgView.Size = new System.Drawing.Size(1013, 321);
             this.dgView.TabIndex = 0;
             // 
             // Column1

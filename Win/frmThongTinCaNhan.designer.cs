@@ -43,7 +43,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(207, 64);
+            this.label7.Location = new System.Drawing.Point(208, 93);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(44, 16);
             this.label7.TabIndex = 29;
@@ -53,7 +53,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(206, 36);
+            this.label1.Location = new System.Drawing.Point(207, 65);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(45, 16);
             this.label1.TabIndex = 20;
@@ -63,7 +63,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(187, 11);
+            this.label3.Location = new System.Drawing.Point(188, 40);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(64, 16);
             this.label3.TabIndex = 16;
@@ -74,7 +74,7 @@
             this.lblTaiKhoan.AutoSize = true;
             this.lblTaiKhoan.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTaiKhoan.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.lblTaiKhoan.Location = new System.Drawing.Point(259, 11);
+            this.lblTaiKhoan.Location = new System.Drawing.Point(260, 40);
             this.lblTaiKhoan.Name = "lblTaiKhoan";
             this.lblTaiKhoan.Size = new System.Drawing.Size(0, 16);
             this.lblTaiKhoan.TabIndex = 30;
@@ -84,7 +84,7 @@
             this.lblHoTen.AutoSize = true;
             this.lblHoTen.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblHoTen.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.lblHoTen.Location = new System.Drawing.Point(259, 36);
+            this.lblHoTen.Location = new System.Drawing.Point(260, 65);
             this.lblHoTen.Name = "lblHoTen";
             this.lblHoTen.Size = new System.Drawing.Size(0, 16);
             this.lblHoTen.TabIndex = 31;
@@ -94,7 +94,7 @@
             this.lblQuyen.AutoSize = true;
             this.lblQuyen.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblQuyen.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.lblQuyen.Location = new System.Drawing.Point(259, 64);
+            this.lblQuyen.Location = new System.Drawing.Point(260, 93);
             this.lblQuyen.Name = "lblQuyen";
             this.lblQuyen.Size = new System.Drawing.Size(0, 16);
             this.lblQuyen.TabIndex = 35;
@@ -105,7 +105,7 @@
             this.pictureBox1.Location = new System.Drawing.Point(12, 12);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(150, 150);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 36;
             this.pictureBox1.TabStop = false;
             // 

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmBCNhapKho));
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -65,22 +66,24 @@
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.groupBox2);
+            this.splitContainer1.Panel2.Controls.Add(this.btnThongKe);
+            this.splitContainer1.Panel2.Controls.Add(this.btnIn);
             this.splitContainer1.Size = new System.Drawing.Size(1019, 468);
             this.splitContainer1.SplitterDistance = 63;
             this.splitContainer1.TabIndex = 0;
             // 
             // groupBox1
             // 
+            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.dtpDenNgay);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.dtpTuNgay);
-            this.groupBox1.Controls.Add(this.btnIn);
-            this.groupBox1.Controls.Add(this.btnThongKe);
-            this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1019, 63);
+            this.groupBox1.Size = new System.Drawing.Size(1019, 67);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Tìm kiếm";
@@ -121,9 +124,11 @@
             // 
             // btnIn
             // 
-            this.btnIn.Location = new System.Drawing.Point(500, 22);
+            this.btnIn.Image = ((System.Drawing.Image)(resources.GetObject("btnIn.Image")));
+            this.btnIn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnIn.Location = new System.Drawing.Point(247, 20);
             this.btnIn.Name = "btnIn";
-            this.btnIn.Size = new System.Drawing.Size(75, 23);
+            this.btnIn.Size = new System.Drawing.Size(143, 43);
             this.btnIn.TabIndex = 3;
             this.btnIn.Text = "In";
             this.btnIn.UseVisualStyleBackColor = true;
@@ -131,9 +136,11 @@
             // 
             // btnThongKe
             // 
-            this.btnThongKe.Location = new System.Drawing.Point(419, 22);
+            this.btnThongKe.Image = ((System.Drawing.Image)(resources.GetObject("btnThongKe.Image")));
+            this.btnThongKe.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnThongKe.Location = new System.Drawing.Point(98, 20);
             this.btnThongKe.Name = "btnThongKe";
-            this.btnThongKe.Size = new System.Drawing.Size(75, 23);
+            this.btnThongKe.Size = new System.Drawing.Size(143, 43);
             this.btnThongKe.TabIndex = 2;
             this.btnThongKe.Text = "Thống kê";
             this.btnThongKe.UseVisualStyleBackColor = true;
@@ -141,11 +148,13 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox2.Controls.Add(this.dgView);
-            this.groupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox2.Location = new System.Drawing.Point(0, 0);
+            this.groupBox2.Location = new System.Drawing.Point(0, 75);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(1019, 401);
+            this.groupBox2.Size = new System.Drawing.Size(1019, 326);
             this.groupBox2.TabIndex = 0;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Thống kê ";
@@ -154,6 +163,9 @@
             // 
             this.dgView.AllowUserToAddRows = false;
             this.dgView.AllowUserToDeleteRows = false;
+            this.dgView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -161,11 +173,10 @@
             this.Column2,
             this.Column3,
             this.Column4});
-            this.dgView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgView.Location = new System.Drawing.Point(3, 16);
             this.dgView.Name = "dgView";
             this.dgView.ReadOnly = true;
-            this.dgView.Size = new System.Drawing.Size(1013, 382);
+            this.dgView.Size = new System.Drawing.Size(1013, 307);
             this.dgView.TabIndex = 1;
             // 
             // Column1

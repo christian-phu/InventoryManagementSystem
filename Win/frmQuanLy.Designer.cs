@@ -28,9 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmQuanLy));
             this.repositoryItemAlignment1 = new DevExpress.XtraRichEdit.Design.RepositoryItemAlignment();
-            this.applicationMenu1 = new DevExpress.XtraBars.Ribbon.ApplicationMenu();
+            this.applicationMenu1 = new DevExpress.XtraBars.Ribbon.ApplicationMenu(this.components);
             this.ribbon = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.btnThongTin = new DevExpress.XtraBars.BarButtonItem();
             this.btnHuongDan = new DevExpress.XtraBars.BarButtonItem();
@@ -51,6 +52,7 @@
             this.barEditItem1 = new DevExpress.XtraBars.BarEditItem();
             this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem2 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem3 = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPage2 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup3 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPage3 = new DevExpress.XtraBars.Ribbon.RibbonPage();
@@ -61,7 +63,6 @@
             this.ribbonPageGroup8 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPage5 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup6 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageCategory1 = new DevExpress.XtraBars.Ribbon.RibbonPageCategory();
@@ -77,6 +78,9 @@
             this.repositoryItemAlignment1.AutoHeight = false;
             this.repositoryItemAlignment1.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.repositoryItemAlignment1.HasArabic = false;
+            this.repositoryItemAlignment1.HasDistribute = false;
+            this.repositoryItemAlignment1.HasThaiDistribute = false;
             this.repositoryItemAlignment1.Name = "repositoryItemAlignment1";
             // 
             // applicationMenu1
@@ -90,6 +94,7 @@
             this.ribbon.ExpandCollapseItem.Id = 0;
             this.ribbon.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
             this.ribbon.ExpandCollapseItem,
+            this.ribbon.SearchEditItem,
             this.btnThongTin,
             this.btnHuongDan,
             this.btnThongTinCaNhan,
@@ -108,9 +113,10 @@
             this.btnThanhToan,
             this.barEditItem1,
             this.barButtonItem1,
-            this.barButtonItem2});
+            this.barButtonItem2,
+            this.barButtonItem3});
             this.ribbon.Location = new System.Drawing.Point(0, 0);
-            this.ribbon.MaxItemId = 28;
+            this.ribbon.MaxItemId = 29;
             this.ribbon.Name = "ribbon";
             this.ribbon.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage2,
@@ -119,7 +125,7 @@
             this.ribbonPage1,
             this.ribbonPage5});
             this.ribbon.QuickToolbarItemLinks.Add(this.btnSkin);
-            this.ribbon.Size = new System.Drawing.Size(1013, 162);
+            this.ribbon.Size = new System.Drawing.Size(1013, 177);
             // 
             // btnThongTin
             // 
@@ -147,7 +153,7 @@
             this.btnThongTinCaNhan.Id = 5;
             this.btnThongTinCaNhan.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnThongTinCaNhan.ImageOptions.Image")));
             this.btnThongTinCaNhan.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnThongTinCaNhan.ImageOptions.LargeImage")));
-            this.btnThongTinCaNhan.LargeWidth = 150;
+            this.btnThongTinCaNhan.LargeWidth = 80;
             this.btnThongTinCaNhan.Name = "btnThongTinCaNhan";
             this.btnThongTinCaNhan.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnThongTinCaNhan_ItemClick);
             // 
@@ -298,11 +304,20 @@
             this.barButtonItem2.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem2.ImageOptions.LargeImage")));
             this.barButtonItem2.Name = "barButtonItem2";
             // 
+            // barButtonItem3
+            // 
+            this.barButtonItem3.Caption = "Quản lý đơn đặt hàng";
+            this.barButtonItem3.Id = 28;
+            this.barButtonItem3.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem3.ImageOptions.Image")));
+            this.barButtonItem3.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem3.ImageOptions.LargeImage")));
+            this.barButtonItem3.Name = "barButtonItem3";
+            this.barButtonItem3.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem3_ItemClick);
+            // 
             // ribbonPage2
             // 
             this.ribbonPage2.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
             this.ribbonPageGroup3});
-            this.ribbonPage2.Image = ((System.Drawing.Image)(resources.GetObject("ribbonPage2.Image")));
+            this.ribbonPage2.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("ribbonPage2.ImageOptions.Image")));
             this.ribbonPage2.Name = "ribbonPage2";
             this.ribbonPage2.Text = "Quản lý danh mục";
             // 
@@ -310,6 +325,7 @@
             // 
             this.ribbonPageGroup3.ItemLinks.Add(this.btnNhanVien);
             this.ribbonPageGroup3.ItemLinks.Add(this.btnSanPham);
+            this.ribbonPageGroup3.ItemLinks.Add(this.barButtonItem3);
             this.ribbonPageGroup3.Name = "ribbonPageGroup3";
             this.ribbonPageGroup3.Text = "Quản lý";
             // 
@@ -318,7 +334,7 @@
             this.ribbonPage3.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
             this.ribbonPageGroup7,
             this.ribbonPageGroup4});
-            this.ribbonPage3.Image = ((System.Drawing.Image)(resources.GetObject("ribbonPage3.Image")));
+            this.ribbonPage3.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("ribbonPage3.ImageOptions.Image")));
             this.ribbonPage3.Name = "ribbonPage3";
             this.ribbonPage3.Text = "Nhập - Xuất";
             // 
@@ -331,8 +347,8 @@
             // 
             // ribbonPageGroup4
             // 
-            this.ribbonPageGroup4.Glyph = ((System.Drawing.Image)(resources.GetObject("ribbonPageGroup4.Glyph")));
-            this.ribbonPageGroup4.ImageUri.Uri = "Apply";
+            this.ribbonPageGroup4.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("ribbonPageGroup4.ImageOptions.Image")));
+            this.ribbonPageGroup4.ImageOptions.ImageUri.Uri = "Apply";
             this.ribbonPageGroup4.ItemLinks.Add(this.barButtonItem1);
             this.ribbonPageGroup4.Name = "ribbonPageGroup4";
             this.ribbonPageGroup4.Text = "Đơn hàng";
@@ -342,7 +358,7 @@
             this.ribbonPage4.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
             this.ribbonPageGroup5,
             this.ribbonPageGroup8});
-            this.ribbonPage4.Image = ((System.Drawing.Image)(resources.GetObject("ribbonPage4.Image")));
+            this.ribbonPage4.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("ribbonPage4.ImageOptions.Image")));
             this.ribbonPage4.Name = "ribbonPage4";
             this.ribbonPage4.Text = "Báo cáo - Thống kê";
             // 
@@ -358,14 +374,13 @@
             // 
             this.ribbonPageGroup8.ItemLinks.Add(this.btnThanhToan);
             this.ribbonPageGroup8.Name = "ribbonPageGroup8";
-            this.ribbonPageGroup8.Text = "Công nợ";
+            this.ribbonPageGroup8.Text = "Dòng tiền";
             // 
             // ribbonPage1
             // 
             this.ribbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
-            this.ribbonPageGroup1,
-            this.ribbonPageGroup2});
-            this.ribbonPage1.Image = ((System.Drawing.Image)(resources.GetObject("ribbonPage1.Image")));
+            this.ribbonPageGroup1});
+            this.ribbonPage1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("ribbonPage1.ImageOptions.Image")));
             this.ribbonPage1.Name = "ribbonPage1";
             this.ribbonPage1.Text = "Hệ thống";
             // 
@@ -374,20 +389,15 @@
             this.ribbonPageGroup1.ItemLinks.Add(this.btnThongTinCaNhan);
             this.ribbonPageGroup1.ItemLinks.Add(this.btnDangNhap);
             this.ribbonPageGroup1.ItemLinks.Add(this.btnDangXuat);
+            this.ribbonPageGroup1.ItemLinks.Add(this.btnDoiMatKhau);
             this.ribbonPageGroup1.Name = "ribbonPageGroup1";
             this.ribbonPageGroup1.Text = "Thông tin";
-            // 
-            // ribbonPageGroup2
-            // 
-            this.ribbonPageGroup2.ItemLinks.Add(this.btnDoiMatKhau);
-            this.ribbonPageGroup2.Name = "ribbonPageGroup2";
-            this.ribbonPageGroup2.Text = "Tài khoản";
             // 
             // ribbonPage5
             // 
             this.ribbonPage5.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
             this.ribbonPageGroup6});
-            this.ribbonPage5.Image = ((System.Drawing.Image)(resources.GetObject("ribbonPage5.Image")));
+            this.ribbonPage5.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("ribbonPage5.ImageOptions.Image")));
             this.ribbonPage5.Name = "ribbonPage5";
             this.ribbonPage5.Text = "Trợ giúp";
             // 
@@ -427,12 +437,12 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1013, 497);
             this.Controls.Add(this.ribbon);
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.IconOptions.Icon = ((System.Drawing.Icon)(resources.GetObject("frmQuanLy.IconOptions.Icon")));
             this.IsMdiContainer = true;
             this.Name = "frmQuanLy";
             this.Ribbon = this.ribbon;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "QUẢN LÝ KHO HÀNG GỐM CHĂM BÀU TRÚC";
+            this.Text = " ";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmQuanLy_FormClosing);
             this.Load += new System.EventHandler(this.frmQuanLy_Load);
@@ -480,9 +490,9 @@
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup8;
         private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage1;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup1;
-        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup2;
         private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage5;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup6;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem3;
         //private DevExpress.XtraBars.BarButtonItem btnCongNoTo;
     }
 }

@@ -28,8 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmThanhToan));
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.lblTongTien = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.dtpDenNgay = new System.Windows.Forms.DateTimePicker();
             this.label2 = new System.Windows.Forms.Label();
@@ -43,9 +47,6 @@
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label1 = new System.Windows.Forms.Label();
-            this.lblTongTien = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -75,15 +76,10 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.lblTongTien);
-            this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.dtpDenNgay);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.dtpTuNgay);
-            this.groupBox1.Controls.Add(this.btnIn);
-            this.groupBox1.Controls.Add(this.btnThongKe);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
             this.groupBox1.Name = "groupBox1";
@@ -91,6 +87,33 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Tìm kiếm";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(218, 17);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(30, 13);
+            this.label5.TabIndex = 10;
+            this.label5.Text = "VNĐ";
+            // 
+            // lblTongTien
+            // 
+            this.lblTongTien.AutoSize = true;
+            this.lblTongTien.Location = new System.Drawing.Point(134, 16);
+            this.lblTongTien.Name = "lblTongTien";
+            this.lblTongTien.Size = new System.Drawing.Size(16, 13);
+            this.lblTongTien.TabIndex = 9;
+            this.lblTongTien.Text = "...";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(73, 16);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(57, 13);
+            this.label1.TabIndex = 8;
+            this.label1.Text = "Doanh thu";
             // 
             // label3
             // 
@@ -128,9 +151,11 @@
             // 
             // btnIn
             // 
-            this.btnIn.Location = new System.Drawing.Point(500, 22);
+            this.btnIn.Image = ((System.Drawing.Image)(resources.GetObject("btnIn.Image")));
+            this.btnIn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnIn.Location = new System.Drawing.Point(221, 44);
             this.btnIn.Name = "btnIn";
-            this.btnIn.Size = new System.Drawing.Size(75, 23);
+            this.btnIn.Size = new System.Drawing.Size(143, 43);
             this.btnIn.TabIndex = 3;
             this.btnIn.Text = "In";
             this.btnIn.UseVisualStyleBackColor = true;
@@ -138,9 +163,11 @@
             // 
             // btnThongKe
             // 
-            this.btnThongKe.Location = new System.Drawing.Point(419, 22);
+            this.btnThongKe.Image = ((System.Drawing.Image)(resources.GetObject("btnThongKe.Image")));
+            this.btnThongKe.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnThongKe.Location = new System.Drawing.Point(59, 44);
             this.btnThongKe.Name = "btnThongKe";
-            this.btnThongKe.Size = new System.Drawing.Size(75, 23);
+            this.btnThongKe.Size = new System.Drawing.Size(143, 43);
             this.btnThongKe.TabIndex = 2;
             this.btnThongKe.Text = "Thống kê";
             this.btnThongKe.UseVisualStyleBackColor = true;
@@ -148,7 +175,12 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.label5);
             this.groupBox2.Controls.Add(this.dgView);
+            this.groupBox2.Controls.Add(this.lblTongTien);
+            this.groupBox2.Controls.Add(this.btnThongKe);
+            this.groupBox2.Controls.Add(this.label1);
+            this.groupBox2.Controls.Add(this.btnIn);
             this.groupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox2.Location = new System.Drawing.Point(0, 0);
             this.groupBox2.Name = "groupBox2";
@@ -161,6 +193,9 @@
             // 
             this.dgView.AllowUserToAddRows = false;
             this.dgView.AllowUserToDeleteRows = false;
+            this.dgView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -169,11 +204,10 @@
             this.Column4,
             this.Column5,
             this.Column3});
-            this.dgView.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgView.Location = new System.Drawing.Point(3, 16);
+            this.dgView.Location = new System.Drawing.Point(3, 109);
             this.dgView.Name = "dgView";
             this.dgView.ReadOnly = true;
-            this.dgView.Size = new System.Drawing.Size(1013, 382);
+            this.dgView.Size = new System.Drawing.Size(1013, 289);
             this.dgView.TabIndex = 1;
             // 
             // Column1
@@ -211,33 +245,6 @@
             this.Column3.Name = "Column3";
             this.Column3.ReadOnly = true;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(620, 31);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(55, 13);
-            this.label1.TabIndex = 8;
-            this.label1.Text = "Tổng tiền:";
-            // 
-            // lblTongTien
-            // 
-            this.lblTongTien.AutoSize = true;
-            this.lblTongTien.Location = new System.Drawing.Point(681, 31);
-            this.lblTongTien.Name = "lblTongTien";
-            this.lblTongTien.Size = new System.Drawing.Size(16, 13);
-            this.lblTongTien.TabIndex = 9;
-            this.lblTongTien.Text = "...";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(765, 32);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(30, 13);
-            this.label5.TabIndex = 10;
-            this.label5.Text = "VNĐ";
-            // 
             // frmThanhToan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -254,6 +261,7 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgView)).EndInit();
             this.ResumeLayout(false);
 

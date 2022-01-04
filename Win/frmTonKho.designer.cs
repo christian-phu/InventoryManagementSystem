@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmTonKho));
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnIn = new System.Windows.Forms.Button();
@@ -58,6 +59,7 @@
             // 
             // splitContainer1.Panel2
             // 
+            this.splitContainer1.Panel2.AllowDrop = true;
             this.splitContainer1.Panel2.Controls.Add(this.groupBox2);
             this.splitContainer1.Size = new System.Drawing.Size(1019, 468);
             this.splitContainer1.SplitterDistance = 63;
@@ -65,21 +67,26 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox1.Controls.Add(this.btnIn);
             this.groupBox1.Controls.Add(this.btnThongKe);
-            this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox1.Location = new System.Drawing.Point(0, 0);
+            this.groupBox1.Location = new System.Drawing.Point(3, 0);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1019, 63);
+            this.groupBox1.Size = new System.Drawing.Size(1038, 60);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Tìm kiếm";
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // btnIn
             // 
-            this.btnIn.Location = new System.Drawing.Point(91, 24);
+            this.btnIn.Image = ((System.Drawing.Image)(resources.GetObject("btnIn.Image")));
+            this.btnIn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnIn.Location = new System.Drawing.Point(254, 12);
             this.btnIn.Name = "btnIn";
-            this.btnIn.Size = new System.Drawing.Size(75, 23);
+            this.btnIn.Size = new System.Drawing.Size(143, 43);
             this.btnIn.TabIndex = 3;
             this.btnIn.Text = "In";
             this.btnIn.UseVisualStyleBackColor = true;
@@ -87,9 +94,11 @@
             // 
             // btnThongKe
             // 
-            this.btnThongKe.Location = new System.Drawing.Point(10, 24);
+            this.btnThongKe.Image = ((System.Drawing.Image)(resources.GetObject("btnThongKe.Image")));
+            this.btnThongKe.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnThongKe.Location = new System.Drawing.Point(83, 12);
             this.btnThongKe.Name = "btnThongKe";
-            this.btnThongKe.Size = new System.Drawing.Size(75, 23);
+            this.btnThongKe.Size = new System.Drawing.Size(143, 43);
             this.btnThongKe.TabIndex = 2;
             this.btnThongKe.Text = "Thống kê";
             this.btnThongKe.UseVisualStyleBackColor = true;
@@ -97,14 +106,16 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox2.Controls.Add(this.dgView);
-            this.groupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox2.Location = new System.Drawing.Point(0, 0);
+            this.groupBox2.Location = new System.Drawing.Point(0, 3);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(1019, 401);
+            this.groupBox2.Size = new System.Drawing.Size(1019, 398);
             this.groupBox2.TabIndex = 0;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Thống kê ";
+            this.groupBox2.Text = "Thống kê sản phẩm tồn kho";
             // 
             // dgView
             // 
@@ -119,7 +130,7 @@
             this.dgView.Location = new System.Drawing.Point(3, 16);
             this.dgView.Name = "dgView";
             this.dgView.ReadOnly = true;
-            this.dgView.Size = new System.Drawing.Size(1013, 382);
+            this.dgView.Size = new System.Drawing.Size(1013, 379);
             this.dgView.TabIndex = 0;
             // 
             // Column3

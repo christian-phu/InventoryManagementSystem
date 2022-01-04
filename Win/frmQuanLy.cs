@@ -317,9 +317,15 @@ namespace Win
 
         }
 
+        
+        private void barButtonItem3_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://docs.google.com/spreadsheets/d/17nc1NGTVbhrt7ZGm4HcZsCwJGVnn0aHyH0dRyf6RGCk/edit#gid=294394684");
+        }
+
         private void barButtonItem1_ItemClick(object sender, ItemClickEventArgs e)
         {
-            System.Diagnostics.Process.Start("https://docs.google.com/forms/d/17roLCI0dPWQNPDCrMCCTjzLUa1uq1BHd2CpgKqw8ALg/edit#responses");
+            System.Diagnostics.Process.Start("https://docs.google.com/spreadsheets/d/17nc1NGTVbhrt7ZGm4HcZsCwJGVnn0aHyH0dRyf6RGCk/edit#gid=294394684");
         }
     }
 }
