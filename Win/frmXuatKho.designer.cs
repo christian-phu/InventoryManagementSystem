@@ -484,7 +484,7 @@
             this.groupBox1.Size = new System.Drawing.Size(351, 222);
             this.groupBox1.TabIndex = 5;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Thông tin";
+            this.groupBox1.Text = "Thông tin xuất kho";
             // 
             // label10
             // 
@@ -610,11 +610,14 @@
             // 
             // groupBox4
             // 
+            this.groupBox4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox4.Controls.Add(this.dgvDuLieu);
             this.groupBox4.Controls.Add(this.bdnDieuKhien);
             this.groupBox4.Location = new System.Drawing.Point(0, 0);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(296, 458);
+            this.groupBox4.Size = new System.Drawing.Size(414, 458);
             this.groupBox4.TabIndex = 0;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Danh sách";
@@ -638,7 +641,7 @@
             this.dgvDuLieu.Name = "dgvDuLieu";
             this.dgvDuLieu.ReadOnly = true;
             this.dgvDuLieu.RowHeadersWidth = 51;
-            this.dgvDuLieu.Size = new System.Drawing.Size(290, 412);
+            this.dgvDuLieu.Size = new System.Drawing.Size(408, 412);
             this.dgvDuLieu.TabIndex = 2;
             this.dgvDuLieu.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDuLieu_CellClick);
             // 
@@ -725,7 +728,7 @@
             this.bdnDieuKhien.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.bdnDieuKhien.Name = "bdnDieuKhien";
             this.bdnDieuKhien.PositionItem = this.bindingNavigatorPositionItem;
-            this.bdnDieuKhien.Size = new System.Drawing.Size(290, 27);
+            this.bdnDieuKhien.Size = new System.Drawing.Size(408, 27);
             this.bdnDieuKhien.TabIndex = 0;
             this.bdnDieuKhien.Text = "bindingNavigator1";
             // 

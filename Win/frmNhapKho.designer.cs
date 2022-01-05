@@ -465,7 +465,7 @@
             this.groupBox1.Size = new System.Drawing.Size(354, 262);
             this.groupBox1.TabIndex = 5;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Thông tin xuất kho";
+            this.groupBox1.Text = "Thông tin nhập kho";
             // 
             // label7
             // 
@@ -725,6 +725,7 @@
             // 
             this.bindingNavigatorPositionItem.AccessibleName = "Position";
             this.bindingNavigatorPositionItem.AutoSize = false;
+            this.bindingNavigatorPositionItem.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
             this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 23);
             this.bindingNavigatorPositionItem.Text = "0";
@@ -766,6 +767,7 @@
             // 
             // txtTiemKiem
             // 
+            this.txtTiemKiem.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtTiemKiem.Name = "txtTiemKiem";
             this.txtTiemKiem.Size = new System.Drawing.Size(200, 23);
             this.txtTiemKiem.Enter += new System.EventHandler(this.txtTiemKiem_Enter);

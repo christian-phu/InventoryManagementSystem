@@ -1,7 +1,8 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\Win"
   ],
-  "SelectedNode": "\\Win.sln",
+  "SelectedNode": "\\Win\\frmQuanLy.cs",
   "PreviewInSolutionExplorer": false
 }
