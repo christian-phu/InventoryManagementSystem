@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Win {
+namespace Win.Data {
     using System;
     using System.ComponentModel;
     using CrystalDecisions.Shared;
@@ -41,7 +41,7 @@ namespace Win {
         
         public override string FullResourceName {
             get {
-                return "Win.crThanhToan.rpt";
+                return "Win.Data.crThanhToan.rpt";
             }
             set {
                 // Do nothing

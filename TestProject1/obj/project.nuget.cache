@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "gdGuzjLMu5f7jJTQe5oX8tfAR9igXK/Bfw0ay/vG5j/mP8xCN162M3c0oNhPe4PZvIlU2EdXe5lOVy1wcRMFKA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Administrator\\source\\repos\\InventoryManagementSystem\\TestProject1\\TestProject1.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Administrator\\.nuget\\packages\\microsoft.net.test.sdk\\16.5.0\\microsoft.net.test.sdk.16.5.0.nupkg.sha512",
+    "C:\\Users\\Administrator\\.nuget\\packages\\nunit\\3.12.0\\nunit.3.12.0.nupkg.sha512",
+    "C:\\Users\\Administrator\\.nuget\\packages\\nunit3testadapter\\3.16.1\\nunit3testadapter.3.16.1.nupkg.sha512"
+  ],
+  "logs": []
+}
